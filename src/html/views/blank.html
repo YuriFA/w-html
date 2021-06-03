@@ -1,0 +1,35 @@
+<% var data = {
+title: "BrandLab",
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<div class="blank">
+  <div class="blank__bg"></div>
+  <div class="blank__text">
+    <picture>
+      <source srcset="images/bg-text@2x.png 2x, images/bg-text.png 1x" />
+      <img src="images/bg-text.png" alt="Hi, hello person. We are RAD and we want all of you." class="blank__text-image" width="482" height="482" />
+    </picture>
+
+    <picture>
+      <source srcset="images/bg-text-mobile@2x.png 2x, images/bg-text-mobile.png 1x" />
+      <img src="images/bg-text-mobile.png" alt="Hi, hello person. We are RAD and we want all of you." class="blank__text-image--mobile" width="364" height="364" />
+    </picture>
+
+    <picture>
+      <source srcset="images/bg-text-mobile-substract@2x.png 2x, images/bg-text-mobile-substract.png 1x" />
+      <img src="images/bg-text-mobile-substract.png" alt="Hi, hello person. We are RAD and we want all of you." class="blank__text-image--mobile-substract" width="351" height="323" />
+    </picture>
+
+  </div>
+
+  <div class="blank__rad">
+    <img src="images/rad.svg" alt="RAD" class="blank__rad-image" width="288" height="106" />
+  </div>
+
+  <div class="blank__rad-circle">
+    <img src="images/rad-circle.svg" alt="RAD" class="blank__rad-circle-image" width="119" height="119" />
+  </div>
+</div>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>

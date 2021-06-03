@@ -36,6 +36,10 @@ html {
   }
 }
 
+body, html {
+  height: 100%;
+}
+
 body {
   min-width: 320px;
   font-family: $font-main;

@@ -1,0 +1,115 @@
+.blank {
+  position: relative;
+  height: 100%;
+}
+
+.blank__bg {
+  height: 100%;
+  background-image: url("../images/bg-desktop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $screen-sm) {
+    // background-image: url("../images/bg-mobile.png");
+    background-position: 53% 50%;
+  }
+}
+
+.blank__text {
+  position: absolute;
+  left: 1.5%;
+  bottom: 0;
+
+  @media (max-width: $screen-sm) {
+    left: 8%;
+  }
+}
+
+.blank__text-image {
+  // background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+
+  @media (max-width: $screen-md) {
+    width: 382px;
+    height: auto;
+  }
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.blank__text-image--mobile {
+  display: none;
+
+  @media (max-width: $screen-sm) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    max-width: 364px;
+    width: 88vw;
+    height: auto;
+    mix-blend-mode: multiply;
+    z-index: 2;
+  }
+}
+
+.blank__text-image--mobile-substract {
+  display: none;
+
+  @media (max-width: $screen-sm) {
+    position: absolute;
+    bottom: 1px;
+    left: 10px;
+    display: block;
+    width: 84.4vw;
+    height: auto;
+    max-width: 351px;
+    z-index: 1;
+  }
+}
+
+
+.blank__rad {
+  position: absolute;
+  right: 16.3125%;
+  bottom: 6%;
+
+  @media (max-width: $screen-md) {
+    right: 6%;
+  }
+
+  @media (max-width: $screen-sm) {
+    top: 46%;
+    bottom: auto;
+    left: 6%;
+    right: auto;
+  }
+}
+
+.blank__rad-image {
+  @media (max-width: $screen-sm) {
+    width: 242px;
+    height: auto;
+  }
+}
+
+.blank__rad-circle {
+  position: absolute;
+  top: 38.8%;
+  right: 3.6%;
+
+  @media (max-width: $screen-sm) {
+    top: 26%;
+    right: 6%;
+  }
+}
+
+.blank__rad-circle-image {
+  @media (max-width: $screen-sm) {
+    width: 100px;
+    height: auto;
+  }
+}
