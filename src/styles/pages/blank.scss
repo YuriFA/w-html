@@ -14,6 +14,10 @@
     // background-image: url("../images/bg-mobile.png");
     background-position: 53% 50%;
   }
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url("../images/bg-desktop@2x.png");
+  }
 }
 
 .blank__text {
