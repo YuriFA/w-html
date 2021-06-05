@@ -20,6 +20,60 @@
   </head>
   <body>
     <% if (showHeader) { %>
+    <div id="sidenav" class="sidenav">
+      <div class="sidenav__wrapper">
+        <div class="sidenav__header">
+          <a class="sidenav__logo" href="/">
+            <picture>
+              <source srcset="images/logo@2x.png 2x, images/logo.png 1x" />
+              <img src="images/logo.png" alt="RAD" class="sidenav__logo-image" width="91" height="45" />
+            </picture>
+          </a>
+
+          <button type="button" class="sidenav-trigger">
+            <span class="icon icon-cross"></span>
+          </button>
+        </div>
+
+        <nav class="sidenav-nav">
+          <ul class="sidenav__list">
+            <li class="sidenav__item">
+              <a class="sidenav__link" href="#">SHOP</a>
+            </li>
+            <li class="sidenav__item">
+              <a class="sidenav__link" href="#">ABOUT</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidenav__footer">
+          <div class="sidenav__lang"><a class="sidenav__lang-link" href="#">RU</a></div>
+
+          <div class="sidenav__footer-right">
+            <nav class="sidenav-social-nav">
+              <ul class="sidenav-social-menu">
+                <li class="sidenav-social-menu-item">
+                  <a class="sidenav-social-link" href="#">
+                    <span class="icon icon-instagram"></span>
+                  </a>
+                </li>
+                <li class="sidenav-social-menu-item">
+                  <a class="sidenav-social-link" href="#">
+                    <span class="icon icon-tiktok"></span>
+                  </a>
+                </li>
+                <li class="sidenav-social-menu-item">
+                  <a class="sidenav-social-link" href="#">
+                    <span class="icon icon-telegram"></span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="looped-text">SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND</div>
     <header class="header" id="header">
       <a class="header__logo" href="/">
@@ -64,5 +118,9 @@
           <a class="header__lang-link" href="#">RU</a>
         </div>
       </div>
+
+      <button type="button" class="sidenav-trigger">
+        <span class="icon icon-burger"></span>
+      </button>
     </header>
     <% } %>

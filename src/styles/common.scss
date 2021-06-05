@@ -19,19 +19,7 @@ html {
     font-size: 58.5%;
   }
 
-  @media (max-width: $screen-md-x) {
-    font-size: 54.5%;
-  }
-
-  @media (max-width: $screen-md) {
-    font-size: 50.5%;
-  }
-
   @media (max-width: $screen-sm) {
-    font-size: 74.5%;
-  }
-
-  @media (max-width: $screen-xs) {
     font-size: 62.5%;
   }
 }
@@ -102,6 +90,13 @@ p {
     background-color: $color-secondary;
     color: $color-main;
   }
+
+  @media (max-width: $screen-sm) {
+    width: 140px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .button--secondary {
@@ -131,6 +126,13 @@ p {
     border: 2px solid $color-main;
     background-color: $color-main;
     color: $color-main;
+  }
+
+  @media (max-width: $screen-sm) {
+    width: 148px;
+    height: 43px;
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 
