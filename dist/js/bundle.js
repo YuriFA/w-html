@@ -1,2 +1,2 @@
-console.log("Hello world!");
+(()=>{"use strict";var e;e=function(){!function(){var e=document.querySelector(".header"),t=e.offsetTop+50;function n(){window.pageYOffset>t?e.classList.add("sticky"):e.classList.remove("sticky")}window.addEventListener("scroll",n),n()}()},"interactive"===document.readyState||"complete"===document.readyState?e():document.addEventListener("DOMContentLoaded",e)})();
 //# sourceMappingURL=bundle.js.map
