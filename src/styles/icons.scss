@@ -6,3 +6,20 @@
   background-position: center center;
 }
 
+.icon-instagram {
+  width: 24px;
+  height: 24px;
+  background-image: svg-load('../icons/instagram.svg');
+}
+
+.icon-tiktok {
+  width: 24px;
+  height: 24px;
+  background-image: svg-load('../icons/tiktok.svg');
+}
+
+.icon-telegram {
+  width: 24px;
+  height: 24px;
+  background-image: svg-load('../icons/telegram.svg');
+}

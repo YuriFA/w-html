@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
@@ -7,8 +7,67 @@
     <title>BrandLab</title>
   </head>
   <body>
-    <header class="header" id="header"></header>
-    <main class="main"></main>
+    <div class="looped-text">
+      SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR
+      FRIEND — SYNERGY IS OUR FRIEND
+    </div>
+    <header class="header" id="header">
+      <a class="header__logo" href="/">
+        <picture><source srcset="images/logo@2x.png 2x, images/logo.png" />
+          <img src="images/logo.png" alt="RAD" class="header__logo-image" width="91" height="45" /></picture
+      ></a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item"><a class="header__menu-link" href="/shop">SHOP</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/about">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <nav class="header__social-nav">
+          <ul class="header__social-menu">
+            <li class="header__social-menu-item">
+              <a class="header__social-link" href="#"><span class="icon icon-instagram"></span></a>
+            </li>
+            <li class="header__social-menu-item">
+              <a class="header__social-link" href="#"><span class="icon icon-tiktok"></span></a>
+            </li>
+            <li class="header__social-menu-item">
+              <a class="header__social-link" href="#"><span class="icon icon-telegram"></span></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__lang"><a class="header__lang-link" href="#">RU</a></div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section section-hero">
+        <div class="hero">
+          <div class="hero__buttons">
+            <button class="button hero__button" type="button">SHOP NOW</button>
+            <button class="button hero__button" type="button">CREATE</button>
+          </div>
+        </div>
+      </section>
+      <section class="section section-products">
+        <h2 class="section__title">Beauty products inspired by real skin</h2>
+        <p class="section__notice">
+          We co-create our products together with our community. We strive to select effective and 100% vegan formulas
+          for each hero product that we launch and we make it bold!
+        </p>
+
+        <ul class="product-list">
+          <li class="product-item">
+            <p class="product-item__title">MASCARA</p>
+            <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+
+            <button class="button button--secondary" type="button">ADD - FROM 15$</button>
+
+          </li>
+        </ul>
+        <a href="#" class="products__see-more">SEE MORE</a>
+        <button class="button button--secondary" type="button">ADD - FROM 15$</button>
+      </section>
+    </main>
     <footer class="footer"></footer>
     <script src="js/bundle.js?v=0.0.1"></script>
   </body>

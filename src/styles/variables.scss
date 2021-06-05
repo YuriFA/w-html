@@ -1,9 +1,14 @@
-$font-main: system-ui, sans-serif;
+$font-main: 'Mabry Pro', sans-serif;
 $font-secondary: system-ui, sans-serif;
 
 $color-main: #000;
 $color-secondary: #fff;
 $color-background: #fff;
+$color-purple: #8387D8;
+$color-purple-light: #A7ABF0;
+$color-yellow: #F8F185;
+$color-green: #4EBC86;
+$color-orange: #F97E54;
 
 $transition-duration: 0.3s;
 $transition-duration-small: 0.2s;
@@ -17,3 +22,5 @@ $screen-md-x: 1158px;
 $screen-md-xx: 1230px;
 $screen-lg: 1366px;
 $screen-xl: 1440px;
+
+$zindex-header: 200;

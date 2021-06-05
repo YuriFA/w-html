@@ -1,9 +1,10 @@
-/* example */
-// @font-face {
-//   font-family: 'ff';
-//   font-style: italic;
-//   font-swap: swap;
-//   font-weight: 400;
-//   src: local('fn'), local('fn'),
-//     url('../fonts/fn.ttf') format('truetype'),
-// }
+/* Mabry Pro */
+@font-face {
+  font-family: 'Mabry Pro';
+  font-style: normal;
+  font-swap: swap;
+  font-weight: 400;
+  src: local('Mabry Pro'), local('Mabry Pro Regular'),
+    url('../fonts/MabryPro-Regular/MabryPro-Regular.woff') format('woff'),
+    url('../fonts/MabryPro-Regular/MabryPro-Regular.woff2') format('woff2');
+}

@@ -1,0 +1,133 @@
+.hero {
+  position: relative;
+  height: 748px;
+  background-image: url("../images/bg-main.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url("../images/bg-main@2x.png");
+  }
+}
+
+.hero__buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 793px;
+}
+
+.hero__button {
+  flex-shrink: 0;
+}
+
+.section-products {
+  padding-top: 72px;
+  padding-bottom: 40px;
+}
+
+.section__title {
+  max-width: 956px;
+  margin: 0 auto 24px;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.section__notice {
+  max-width: 956px;
+  margin: 0 auto;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.product-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 96px;
+  padding-bottom: 24px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: calc(100% - 50px * 2);
+    height: 1px;
+    background-color: $color-main;
+  }
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 358px;
+  overflow: hidden;
+}
+
+.product-item__title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.product-item__notice {
+  margin-bottom: 19px;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.product-item__button-add {
+  width: 183px;
+  height: 47px;
+}
+
+.product-item__image {
+  margin-top: 33px;
+}
+
+.products__see-more {
+  display: block;
+  margin-top: 44px;
+  font-size: 23px;
+  line-height: 23px;
+  color: $color-main;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.section-generator {
+  padding-top: 72px;
+  padding-bottom: 88px;
+  background-color: $color-yellow;
+
+  .section__notice {
+    max-width: 651px;
+  }
+}
+
+.generator__image {
+  display: block;
+  margin: 34px auto 0;
+}
+
+.generator__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 793px;
+  margin: 53px auto 0;
+}
+

@@ -1,9 +1,88 @@
 <% var data = {
 title: "BrandLab",
+showHeader: true,
+showFooter: true,
+includeScripts: true,
 }; %>
 <%= _.template(require('./../includes/header.html'))(data) %>
 
 <main class="main">
+  <section class="section section-hero">
+    <div class="hero">
+      <div class="hero__buttons">
+        <button class="button hero__button" type="button">SHOP NOW</button>
+        <button class="button hero__button" type="button">CREATE</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-products">
+    <h2 class="section__title">Beauty products inspired by real skin</h2>
+    <p class="section__notice">We co-create our products together with our community. We strive to select effective and 100% vegan formulas for each hero product that we launch and we make it bold!</p>
+
+    <ul class="product-list">
+      <li class="product-item">
+        <p class="product-item__title">MASCARA</p>
+        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+
+        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+
+        <picture>
+          <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
+          <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
+        </picture>
+      </li>
+      <li class="product-item">
+        <p class="product-item__title">MASCARA</p>
+        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+
+        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+
+        <picture>
+          <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
+          <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
+        </picture>
+      </li>
+      <li class="product-item">
+        <p class="product-item__title">MASCARA</p>
+        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+
+        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+
+        <picture>
+          <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
+          <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
+        </picture>
+      </li>
+      <li class="product-item">
+        <p class="product-item__title">MASCARA</p>
+        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+
+        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+
+        <picture>
+          <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
+          <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
+        </picture>
+      </li>
+    </ul>
+
+    <a href="#" class="products__see-more">SEE MORE</a>
+  </section>
+
+  <section class="section section-generator">
+    <p class="section__notice">I'm RAD MEME GENERATOR.<br>I am an artificial intelligence dedicated to&nbsp;generating&nbsp;unlimited amounts of unique inspirational quotes for endless enrichment of pointless human existence.</p>
+
+    <picture>
+      <source srcset="images/generator@2x.png 2x, images/generator.png 1x" />
+      <img src="images/generator.png" alt="RAD Worldwide" class="generator__image" width="665" height="460" />
+    </picture>
+
+    <div class="generator__buttons">
+      <button class="button generator__button" type="button">CREATE</button>
+      <button class="button generator__button" type="button">DOWNLOAD</button>
+    </div>
+  </section>
 </main>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>
