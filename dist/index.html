@@ -7,6 +7,41 @@
     <title>BrandLab</title>
   </head>
   <body>
+    <div id="sidenav" class="sidenav">
+      <div class="sidenav__wrapper">
+        <div class="sidenav__header">
+          <a class="sidenav__logo" href="/"
+            ><picture
+              ><source srcset="images/logo@2x.png 2x, images/logo.png" />
+              <img src="images/logo.png" alt="RAD" class="sidenav__logo-image" width="91" height="45" /></picture></a
+          ><button type="button" class="sidenav-trigger"><span class="icon icon-cross"></span></button>
+        </div>
+        <nav class="sidenav-nav">
+          <ul class="sidenav__list">
+            <li class="sidenav__item"><a class="sidenav__link" href="#">SHOP</a></li>
+            <li class="sidenav__item"><a class="sidenav__link" href="#">ABOUT</a></li>
+          </ul>
+        </nav>
+        <div class="sidenav__footer">
+          <div class="sidenav__lang"><a class="sidenav__lang-link" href="#">RU</a></div>
+          <div class="sidenav__footer-right">
+            <nav class="sidenav-social-nav">
+              <ul class="sidenav-social-menu">
+                <li class="sidenav-social-menu-item">
+                  <a class="sidenav-social-link" href="#"><span class="icon icon-instagram"></span></a>
+                </li>
+                <li class="sidenav-social-menu-item">
+                  <a class="sidenav-social-link" href="#"><span class="icon icon-tiktok"></span></a>
+                </li>
+                <li class="sidenav-social-menu-item">
+                  <a class="sidenav-social-link" href="#"><span class="icon icon-telegram"></span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="looped-text">
       SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR
       FRIEND — SYNERGY IS OUR FRIEND
@@ -39,6 +74,7 @@
         </nav>
         <div class="header__lang"><a class="header__lang-link" href="#">RU</a></div>
       </div>
+      <button type="button" class="sidenav-trigger"><span class="icon icon-burger"></span></button>
     </header>
     <main class="main">
       <section class="section section-hero">
@@ -112,17 +148,17 @@
     </main>
     <footer class="footer">
       <div class="footer__row">
-        <div class="footer__col--2rows footer__col--big footer-col1">
+        <div class="footer__col footer__col--2rows footer__col--big footer-col1">
           <p class="footer-col1__title">WHAT WE BELIEVE IN RAD</p>
           <p class="footer-col1__notice">radical lovers of everything about you</p>
         </div>
-        <div class="footer__col--2rows footer__col--big">
+        <div class="footer__col footer__col--2rows footer__col--big footer-col2">
           <picture
             ><source srcset="images/footer-photo@2x.png 2x, images/footer-photo.png" />
-            <img src="images/footer-photo.png" alt="" class="footer-photo" width="720" height="552"
+            <img src="images/footer-photo.png" alt="" class="footer-col2__image" width="720" height="552"
           /></picture>
         </div>
-        <div class="footer__col--2rows footer-col3">
+        <div class="footer__col footer__col--2rows footer-col3">
           <nav class="footer-socials-nav">
             <ul class="footer-socials-menu">
               <li class="footer-socials-menu__item"><a class="footer-socials-menu__link" href="#">INSTAGRAM</a></li>
@@ -153,11 +189,23 @@
               <li class="footer-menu__item"><a class="footer-menu__link" href="#">Terms & Conditions</a></li>
               <li class="footer-menu__item"><a class="footer-menu__link" href="#">Cookie Police</a></li>
             </ul>
-            <ul class="footer-menu">
+            <ul class="footer-menu footer-menu--socials">
               <li class="footer-menu__item footer-menu__category">FOLLOW US</li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Instagram</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">TikTok</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Telegram</a></li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#"
+                  ><span class="text">Instagram</span><span class="icon icon-instagram"></span
+                ></a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#"
+                  ><span class="text">TikTok</span><span class="icon icon-tiktok"></span
+                ></a>
+              </li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="#"
+                  ><span class="text">Telegram</span><span class="icon icon-telegram"></span
+                ></a>
+              </li>
             </ul>
           </nav>
         </div>
