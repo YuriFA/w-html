@@ -1,0 +1,74 @@
+.section-about {
+  padding: 90px 63px;
+  background-color: $color-orange;
+}
+
+.about-title {
+  font-size: 72px;
+  line-height: 90px;
+  text-transform: uppercase;
+}
+
+.about-notice {
+  margin-top: 90px;
+  font-size: 72px;
+  line-height: 90px;
+}
+
+.section-info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0;
+}
+
+.faq {
+  padding: 63px 63px 85px;
+  background-color: $color-yellow;
+}
+
+.faq__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.faq-questions__item {
+  margin-top: 30px;
+}
+
+.faq-questions__title {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.faq-questions__panel-content {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.contacts {
+  padding: 63px 63px 85px;
+  background-color: $color-pink;
+}
+
+.contacts__title {
+  font-size: 36px;
+  line-height: 40px;
+  text-indent: 1px;
+  text-transform: uppercase;
+}
+
+.contacts__row {
+  margin-top: 35px;
+  font-size: 36px;
+  line-height: 50px;
+  text-indent: 1px;
+  text-transform: uppercase;
+}
+
+.contacts__label {
+  display: block;
+}
+
+.contacts__value {
+  display: block;
+}
