@@ -1,3 +1,6 @@
+import Accordion from 'accordion-js';
+
+import { ColorPicker, ATTRS as COLOR_PICKER_ATTRS } from './lib/color-picker';
 import { DOMReady } from './utils/DOMReady';
 
 const initStickyHeader = () => {
@@ -62,7 +65,61 @@ const initSidebar = () => {
   }
 };
 
+const initAccordion = (event) => {
+  if (!event.matches) {
+    return;
+  }
+
+  const faqQuestions = Array.from(document.querySelectorAll('.faq-questions'));
+
+  if (faqQuestions.length > 0) {
+    faqQuestions.forEach((element, index) => {
+      new Accordion(element, {
+        duration: 400,
+        elementClass: 'faq-questions__item',
+        triggerClass: 'faq-questions__title',
+        panelClass: 'faq-questions__panel',
+        openOnInit: index === 0 ? [0] : [],
+        showMultiple: true,
+      });
+    });
+  }
+};
+
+const initColorPicker = () => {
+  const colorPickers = Array.from(
+    document.querySelectorAll(`[${COLOR_PICKER_ATTRS.CONTINER}]`),
+  );
+  if (colorPickers) {
+    colorPickers.forEach((element) => {
+      new ColorPicker(element);
+    });
+  }
+};
+
+const initReadMore = () => {
+  const privacyMoreButton = document.querySelector('.privacy-read-more');
+  const privacyMoreContent = document.querySelector('.privacy-notice__more');
+
+  if (privacyMoreButton) {
+    privacyMoreButton.addEventListener('click', () => {
+      privacyMoreButton.style.display = 'none';
+      privacyMoreContent.classList.toggle('privacy-notice__more--active');
+    });
+  }
+};
+
 DOMReady(() => {
   initStickyHeader();
   initSidebar();
+
+  const mobileMatchMedia = window.matchMedia('(max-width: 768px)');
+  mobileMatchMedia.addListener(initAccordion);
+  window.addEventListener('load', function () {
+    initAccordion(mobileMatchMedia);
+  });
+
+  initColorPicker();
+
+  initReadMore();
 });

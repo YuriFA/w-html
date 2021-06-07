@@ -1,0 +1,78 @@
+.section-privacy {
+  display: flex;
+  align-items: flex-start;
+  padding: 50px 50px 82px;
+  background-color: $color-yellow;
+
+  @media (max-width: $screen-sm) {
+    flex-wrap: wrap;
+    padding: 36px 15px 38px;
+  }
+}
+
+.privacy-title {
+  flex-shrink: 0;
+  flex-basis: 50%;
+  width: 50%;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: uppercase;
+
+  @media (max-width: $screen-sm) {
+    flex-basis: 100%;
+    width: 100%;
+    margin-bottom: 17px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.privacy-notice {
+  flex-shrink: 0;
+  flex-basis: 50%;
+  width: 50%;
+  padding-left: 34px;
+  font-size: 24px;
+  line-height: 33px;
+  overflow: hidden;
+
+  &__content {
+    white-space: pre-line;
+  }
+
+  &__more {
+    max-height: 0;
+  }
+
+  &__more--active {
+    margin-top: 33px;
+    max-height: 100%;
+  }
+
+  @media (max-width: $screen-sm) {
+    flex-basis: 100%;
+    width: 100%;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 19px;
+
+    &__more--active {
+      margin-top: 19px;
+    }
+  }
+}
+
+.privacy-read-more {
+  @include button-reset;
+
+  display: block;
+  margin-top: 30px;
+  font-size: 24px;
+  line-height: 24px;
+  border-bottom: 1px solid $color-main;
+
+  @media (max-width: $screen-sm) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

@@ -1,0 +1,16 @@
+ .section-shop {
+   padding-bottom: 76px;
+
+  @media (max-width: $screen-sm) {
+    padding-bottom: 12px;
+  }
+ }
+
+ .section-shop .section__title {
+   margin-bottom: 24px;
+ }
+
+ .section-shop .section__notice {
+   font-size: 18px;
+   line-height: 24px;
+ }
