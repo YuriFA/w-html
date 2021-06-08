@@ -1,7 +1,12 @@
 import Accordion from 'accordion-js';
+// core version + navigation, pagination modules:
+import Swiper, { Navigation, Pagination } from 'swiper/core';
 
 import { ColorPicker, ATTRS as COLOR_PICKER_ATTRS } from './lib/color-picker';
 import { DOMReady } from './utils/DOMReady';
+
+// configure Swiper to use modules
+Swiper.use([Navigation, Pagination]);
 
 const initStickyHeader = () => {
   const header = document.querySelector('.header');
@@ -27,6 +32,8 @@ const initSidebar = () => {
   };
 
   const SIDEBAR_ID = 'sidenav';
+
+  document.getElementById(SIDEBAR_ID).style.transition = `all 0.3s cubic-bezier(0, 0, 0.2, 1)`;
 
   const sidebarTrigger = Array.from(
     document.querySelectorAll(`.${CLASSES.TRIGGER}`),
@@ -109,6 +116,18 @@ const initReadMore = () => {
   }
 };
 
+const initProductSlider = () => {
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+};
+
 DOMReady(() => {
   initStickyHeader();
   initSidebar();
@@ -122,4 +141,6 @@ DOMReady(() => {
   initColorPicker();
 
   initReadMore();
+
+  initProductSlider();
 });

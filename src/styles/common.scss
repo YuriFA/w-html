@@ -71,6 +71,7 @@ p {
   border: 2px solid $color-main;
   color: $color-secondary;
   transition: background-color $transition-duration ease-in-out, box-shadow $transition-duration ease-in-out, color $transition-duration ease-in-out, border-color $transition-duration ease-in-out;
+  text-decoration: none;
 
   &:hover {
     border: 2px solid transparent;

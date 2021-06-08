@@ -10,7 +10,7 @@ includeScripts: true,
   <section class="section section-hero">
     <div class="hero">
       <div class="hero__buttons">
-        <button class="button hero__button" type="button">SHOP NOW</button>
+        <a class="button hero__button" href="/shop.html">SHOP NOW</a>
         <button class="button hero__button" type="button">CREATE</button>
       </div>
     </div>
@@ -22,56 +22,16 @@ includeScripts: true,
 
     <ul class="product-list">
       <li class="product-item">
-        <p class="product-item__title">MASCARA</p>
-        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-
-        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-
-        <div class="product-item__image-container">
-          <picture>
-            <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
-            <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
-          </picture>
-        </div>
+        <%= _.template(require('./../includes/product-item.html'))() %>
       </li>
       <li class="product-item">
-        <p class="product-item__title">MASCARA</p>
-        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-
-        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-
-        <div class="product-item__image-container">
-          <picture>
-            <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
-            <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
-          </picture>
-        </div>
+        <%= _.template(require('./../includes/product-item.html'))() %>
       </li>
       <li class="product-item">
-        <p class="product-item__title">MASCARA</p>
-        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-
-        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-
-        <div class="product-item__image-container">
-          <picture>
-            <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
-            <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
-          </picture>
-        </div>
+        <%= _.template(require('./../includes/product-item.html'))() %>
       </li>
       <li class="product-item">
-        <p class="product-item__title">MASCARA</p>
-        <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-
-        <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-
-        <div class="product-item__image-container">
-          <picture>
-            <source srcset="images/product-1@2x.png 2x, images/product-1.png 1x" />
-            <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334" />
-          </picture>
-        </div>
+        <%= _.template(require('./../includes/product-item.html'))() %>
       </li>
     </ul>
 
@@ -91,6 +51,7 @@ includeScripts: true,
       <button class="button generator__button" type="button">DOWNLOAD</button>
     </div>
   </section>
+
   <section class="section section-banners">
     <div class="banners__col banners-col1">
       <p class="banners-col1__title">WHAT WE BELIEVE IN RAD</p>
