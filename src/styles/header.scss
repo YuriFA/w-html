@@ -102,6 +102,10 @@ $header-height: 102px;
   white-space: nowrap;
   overflow: hidden;
 
+  @media (max-width: $screen-md-xx) {
+    line-height: 28px;
+  }
+
   @media (max-width: $screen-sm) {
     height: 25px;
     padding: 5px 0 4px;
@@ -113,6 +117,10 @@ $header-height: 102px;
 .looped-text__content {
   animation: scroll 4s linear infinite;
 
+  @media (max-width: $screen-md-xx) {
+    animation: scrollMedium 4s linear infinite;
+  }
+
   @media (max-width: $screen-sm) {
     animation: scrollMobile 4s linear infinite;
   }
@@ -121,6 +129,11 @@ $header-height: 102px;
 @keyframes scroll {
 	0% { transform: translateX(0); }
 	100% { transform: translateX(-245px)}
+}
+
+@keyframes scrollMedium {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-229px)}
 }
 
 @keyframes scrollMobile {
