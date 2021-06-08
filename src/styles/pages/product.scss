@@ -239,8 +239,16 @@
 }
 
 .description-col1 {
+  position: relative;
   max-height: 600px;
   overflow: hidden;
+
+  &:hover {
+    .description-col1__notice {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
 
   @media (max-width: $screen-sm) {
     height: 260px;
@@ -253,6 +261,19 @@
   height: auto;
   object-fit: cover;
   object-position: center;
+}
+
+.description-col1__notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 65px;
+  z-index: 2;
+
+  @media (max-width: $screen-md) {
+    font-size: 30px;
+  }
 }
 
 .description-col2 {
@@ -305,9 +326,17 @@
 }
 
 .description-col3 {
+  position: relative;
   height: 750px;
   padding: 50px 0;
   background-color: $color-gray;
+
+  &:hover {
+    .description-col3__notice {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
 
   .swiper-container {
     position: relative;
@@ -332,6 +361,13 @@
     left: 58px;
     bottom: 0;
     z-index: 100;
+    cursor: pointer;
+
+    &:hover {
+      .icon-arrow-left {
+        background-image: svg-load("../icons/arrow-left.svg", stroke = $color-purple-light);
+      }
+    }
   }
 
   .swiper-button-next {
@@ -339,6 +375,13 @@
     right: 58px;
     bottom: 0;
     z-index: 100;
+    cursor: pointer;
+
+    &:hover {
+      .icon-arrow-right {
+        background-image: svg-load("../icons/arrow-right.svg", stroke = $color-purple-light);
+      }
+    }
   }
 
   @media (max-width: $screen-sm) {
@@ -370,3 +413,17 @@
     }
   }
 }
+
+.description-col3__notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 65px;
+  z-index: 2;
+
+  @media (max-width: $screen-md) {
+    font-size: 30px;
+  }
+}
+
