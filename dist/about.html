@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="style.bundle.css?v=0.0.1" />
     <title>BrandLab</title>
   </head>
@@ -18,8 +25,8 @@
         </div>
         <nav class="sidenav-nav">
           <ul class="sidenav__list">
-            <li class="sidenav__item"><a class="sidenav__link" href="#">SHOP</a></li>
-            <li class="sidenav__item"><a class="sidenav__link" href="#">ABOUT</a></li>
+            <li class="sidenav__item"><a class="sidenav__link" href="/shop.html">SHOP</a></li>
+            <li class="sidenav__item"><a class="sidenav__link" href="/about.html">ABOUT</a></li>
           </ul>
         </nav>
         <div class="sidenav__footer">
@@ -43,8 +50,22 @@
       </div>
     </div>
     <div class="looped-text">
-      SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR
-      FRIEND — SYNERGY IS OUR FRIEND
+      <div class="looped-text__content">
+        <span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND</span>
+      </div>
     </div>
     <header class="header" id="header">
       <a class="header__logo" href="/"
@@ -54,8 +75,8 @@
       ></a>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li class="header__menu-item"><a class="header__menu-link" href="/shop">SHOP</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="/about">ABOUT</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/shop.html">SHOP</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/about.html">ABOUT</a></li>
         </ul>
       </nav>
       <div class="header__right">
@@ -88,7 +109,7 @@
         </p>
       </section>
       <section class="section section-info">
-        <div class="faq">
+        <div class="faq" id="faq">
           <p class="faq__title">FAQ</p>
           <ul class="faq-questions">
             <li class="faq-questions__item">
@@ -102,16 +123,50 @@
                 </div>
               </div>
             </li>
+            <li class="faq-questions__item">
+              <div class="faq-questions__title">
+                2. Are the products vegan? <span class="faq-questions__expand"></span>
+              </div>
+              <div class="faq-questions__panel">
+                <div class="faq-questions__panel-content">
+                  And when shiny people get together, everything changes for good. So, today is the day and here’s the
+                  plan: let’s do this. Together. RAD radical lovers of everything about you.
+                </div>
+              </div>
+            </li>
+            <li class="faq-questions__item">
+              <div class="faq-questions__title">
+                3. Are the products vegan? <span class="faq-questions__expand"></span>
+              </div>
+              <div class="faq-questions__panel">
+                <div class="faq-questions__panel-content">
+                  And when shiny people get together, everything changes for good. So, today is the day and here’s the
+                  plan: let’s do this. Together. RAD radical lovers of everything about you.
+                </div>
+              </div>
+            </li>
+            <li class="faq-questions__item">
+              <div class="faq-questions__title">
+                4. Are the products vegan? <span class="faq-questions__expand"></span>
+              </div>
+              <div class="faq-questions__panel">
+                <div class="faq-questions__panel-content">
+                  And when shiny people get together, everything changes for good. So, today is the day and here’s the
+                  plan: let’s do this. Together. RAD radical lovers of everything about you.
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
-        <div class="contacts">
+        <div class="contacts" id="contacts">
           <p class="contacts__title">CONTACT</p>
           <p class="contacts__row">
-            <span class="contacts__label">EMAIL:</span> <span class="contacts__value">radnotbad@GMAIL.com</span>
+            <span class="contacts__label">EMAIL:</span>
+            <a class="contacts__value" href="mailto:radnotbad@gmail.com">radnotbad@gmail.com</a>
           </p>
-          <p class="contacts__row"><span class="contacts__value">@radnotbad</span></p>
+          <p class="contacts__row"><a class="contacts__value" href="#">@radnotbad</a></p>
           <p class="contacts__row">
-            <span class="contacts__label">TELEGRAM:</span> <span class="contacts__value">+4955555555555</span>
+            <span class="contacts__label">TELEGRAM:</span> <a class="contacts__value" href="#">+4955555555555</a>
           </p>
         </div>
       </section>
@@ -127,8 +182,8 @@
             </ul>
           </nav>
         </div>
-        <div class="footer__col footer-col2"><a class="footer-col2__link" href="#">SHOP</a></div>
-        <div class="footer__col footer-col3"><a class="footer-col3__link" href="#">ABOUT</a></div>
+        <div class="footer__col footer-col2"><a class="footer-col2__link" href="/shop.html">SHOP</a></div>
+        <div class="footer__col footer-col3"><a class="footer-col3__link" href="/about.html">ABOUT</a></div>
         <div class="footer__col footer__col--medium footer-col4">
           <picture
             ><source srcset="images/logo@2x.png 2x, images/logo.png" />
@@ -140,14 +195,16 @@
           <nav class="footer-nav">
             <ul class="footer-menu">
               <li class="footer-menu__item footer-menu__category">HELP</li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">FAQ</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Contact Us</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/about.html#faq">FAQ</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/about.html#contacts">Contact Us</a></li>
             </ul>
             <ul class="footer-menu">
               <li class="footer-menu__item footer-menu__category">LEGAL INFO</li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Privacy Policy</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Terms & Conditions</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Cookie Police</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/privacy.html">Privacy Policy</a></li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="/privacy.html">Terms & Conditions</a>
+              </li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/privacy.html">Cookie Police</a></li>
             </ul>
             <ul class="footer-menu footer-menu--socials">
               <li class="footer-menu__item footer-menu__category">FOLLOW US</li>

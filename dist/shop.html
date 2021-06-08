@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="style.bundle.css?v=0.0.1" />
     <title>BrandLab</title>
   </head>
@@ -18,8 +25,8 @@
         </div>
         <nav class="sidenav-nav">
           <ul class="sidenav__list">
-            <li class="sidenav__item"><a class="sidenav__link" href="#">SHOP</a></li>
-            <li class="sidenav__item"><a class="sidenav__link" href="#">ABOUT</a></li>
+            <li class="sidenav__item"><a class="sidenav__link" href="/shop.html">SHOP</a></li>
+            <li class="sidenav__item"><a class="sidenav__link" href="/about.html">ABOUT</a></li>
           </ul>
         </nav>
         <div class="sidenav__footer">
@@ -43,8 +50,22 @@
       </div>
     </div>
     <div class="looped-text">
-      SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR FRIEND — SYNERGY IS OUR
-      FRIEND — SYNERGY IS OUR FRIEND
+      <div class="looped-text__content">
+        <span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND — </span
+        ><span class="looped-text__slide">SYNERGY IS OUR FRIEND</span>
+      </div>
     </div>
     <header class="header" id="header">
       <a class="header__logo" href="/"
@@ -54,8 +75,8 @@
       ></a>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li class="header__menu-item"><a class="header__menu-link" href="/shop">SHOP</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="/about">ABOUT</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/shop.html">SHOP</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="/about.html">ABOUT</a></li>
         </ul>
       </nav>
       <div class="header__right">
@@ -77,48 +98,196 @@
       <button type="button" class="sidenav-trigger"><span class="icon icon-burger"></span></button>
     </header>
     <main class="main">
-      <section class="section section-products">
-        <h2 class="section__title">Beauty products inspired by real skin</h2>
+      <section class="section section-products section-shop">
+        <h2 class="section__title">Beauty products inspired by&nbsp;real skin</h2>
         <p class="section__notice">
-          We co-create our products together with our community. We strive to select effective and 100% vegan formulas
-          for each hero product that we launch and we make it bold!
+          We co-create our products together with our community. We strive to select effective&nbsp;and 100% vegan
+          formulas for&nbsp;each&nbsp;hero product that we launch and&nbsp;we make it bold!
         </p>
+        <div class="product-categories product-categories--mobile">
+          <p class="product-categories__title">APPLY ON</p>
+          <ul class="product-categories-list">
+            <li class="product-categories-list__item product-categories-list__item--active">
+              <a class="product-categories-list__link" href="#">ALL</a>
+            </li>
+            <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">FACE</a></li>
+            <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">LIPS</a></li>
+            <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">EYES</a></li>
+          </ul>
+        </div>
         <ul class="product-list">
-          <li class="product-item">
-            <p class="product-item__title">MASCARA</p>
-            <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-            <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button
-            ><picture
-              ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-              <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-            /></picture>
+          <li class="product-item product-item-categories">
+            <div class="product-categories">
+              <p class="product-categories__title">APPLY ON</p>
+              <ul class="product-categories-list">
+                <li class="product-categories-list__item product-categories-list__item--active">
+                  <a class="product-categories-list__link" href="#">ALL</a>
+                </li>
+                <li class="product-categories-list__item">
+                  <a class="product-categories-list__link" href="#">FACE</a>
+                </li>
+                <li class="product-categories-list__item">
+                  <a class="product-categories-list__link" href="#">LIPS</a>
+                </li>
+                <li class="product-categories-list__item">
+                  <a class="product-categories-list__link" href="#">EYES</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="product-item">
-            <p class="product-item__title">MASCARA</p>
-            <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-            <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button
-            ><picture
-              ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-              <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-            /></picture>
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
           </li>
           <li class="product-item">
-            <p class="product-item__title">MASCARA</p>
-            <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-            <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button
-            ><picture
-              ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-              <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-            /></picture>
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
           </li>
           <li class="product-item">
-            <p class="product-item__title">MASCARA</p>
-            <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-            <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button
-            ><picture
-              ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-              <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-            /></picture>
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">LIPSTICK</p>
+              <p class="product-item__notice">What’s your flavour?</p>
+              <div class="product-item__colors" data-color-picker="">
+                <button type="button" class="colors-button colors-button--left" data-color-picker-prev="">
+                  <span class="icon icon-arrow-left"></span>
+                </button>
+                <ul class="colors-list" data-color-picker-list="">
+                  <li class="colors-list__item">
+                    <button class="colors-list__color" type="button" style="background-color: #f2aebc"></button>
+                  </li>
+                  <li class="colors-list__item" data-color-picker-active="">
+                    <button class="colors-list__color" type="button" style="background-color: #8f3733"></button>
+                  </li>
+                  <li class="colors-list__item">
+                    <button class="colors-list__color" type="button" style="background-color: #e33527"></button>
+                  </li>
+                  <li class="colors-list__item">
+                    <button class="colors-list__color" type="button" style="background-color: #f9e2d6"></button>
+                  </li>
+                </ul>
+                <button type="button" class="colors-button colors-button--right" data-color-picker-next="">
+                  <span class="icon icon-arrow-right"></span>
+                </button>
+              </div>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
+                  <img src="images/product-2.png" alt="product-1" class="product-item__image"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
+          </li>
+          <li class="product-item">
+            <a class="product-item-wrapper" href="/product.html"
+              ><p class="product-item__title">MASCARA</p>
+              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
+              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <div class="product-item__image-container">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
+                /></picture></div
+            ></a>
           </li>
         </ul>
       </section>
@@ -134,8 +303,8 @@
             </ul>
           </nav>
         </div>
-        <div class="footer__col footer-col2"><a class="footer-col2__link" href="#">SHOP</a></div>
-        <div class="footer__col footer-col3"><a class="footer-col3__link" href="#">ABOUT</a></div>
+        <div class="footer__col footer-col2"><a class="footer-col2__link" href="/shop.html">SHOP</a></div>
+        <div class="footer__col footer-col3"><a class="footer-col3__link" href="/about.html">ABOUT</a></div>
         <div class="footer__col footer__col--medium footer-col4">
           <picture
             ><source srcset="images/logo@2x.png 2x, images/logo.png" />
@@ -147,14 +316,16 @@
           <nav class="footer-nav">
             <ul class="footer-menu">
               <li class="footer-menu__item footer-menu__category">HELP</li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">FAQ</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Contact Us</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/about.html#faq">FAQ</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/about.html#contacts">Contact Us</a></li>
             </ul>
             <ul class="footer-menu">
               <li class="footer-menu__item footer-menu__category">LEGAL INFO</li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Privacy Policy</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Terms & Conditions</a></li>
-              <li class="footer-menu__item"><a class="footer-menu__link" href="#">Cookie Police</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/privacy.html">Privacy Policy</a></li>
+              <li class="footer-menu__item">
+                <a class="footer-menu__link" href="/privacy.html">Terms & Conditions</a>
+              </li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/privacy.html">Cookie Police</a></li>
             </ul>
             <ul class="footer-menu footer-menu--socials">
               <li class="footer-menu__item footer-menu__category">FOLLOW US</li>

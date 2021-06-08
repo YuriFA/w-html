@@ -98,108 +98,115 @@
       <button type="button" class="sidenav-trigger"><span class="icon icon-burger"></span></button>
     </header>
     <main class="main">
-      <section class="section section-hero">
-        <div class="hero">
-          <div class="hero__buttons">
-            <a class="button hero__button" href="/shop.html">SHOP NOW</a>
-            <button class="button hero__button" type="button">CREATE</button>
+      <section class="section section-product">
+        <div class="product">
+          <p class="product__title--mobile">MASCARA</p>
+          <p class="product__notice--mobile">SYNERGY IS OUR FRIEND</p>
+          <div class="product__image-container">
+            <picture
+              ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+              <img src="images/product-1.png" alt="product-1" class="product__image" width="517" height="517"
+            /></picture>
+          </div>
+          <div class="product__content">
+            <p class="product__title">MASCARA</p>
+            <p class="product__notice">SYNERGY IS OUR FRIEND</p>
+            <p class="product__colors-title">PICK A COLOR</p>
+            <div class="product__colors" data-color-picker="">
+              <button type="button" class="colors-button colors-button--left" data-color-picker-prev="">
+                <span class="icon icon-arrow-left"></span>
+              </button>
+              <ul class="colors-list" data-color-picker-list="">
+                <li class="colors-list__item">
+                  <button class="colors-list__color" type="button" style="background-color: #f2aebc"></button>
+                </li>
+                <li class="colors-list__item" data-color-picker-active="">
+                  <button class="colors-list__color" type="button" style="background-color: #8f3733"></button>
+                </li>
+                <li class="colors-list__item">
+                  <button class="colors-list__color" type="button" style="background-color: #e33527"></button>
+                </li>
+                <li class="colors-list__item">
+                  <button class="colors-list__color" type="button" style="background-color: #f9e2d6"></button>
+                </li>
+              </ul>
+              <button type="button" class="colors-button colors-button--right" data-color-picker-next="">
+                <span class="icon icon-arrow-right"></span>
+              </button>
+            </div>
+            <p class="product__colors-notice">COLOR — I LOVE THIS ONE</p>
+            <button class="button button--secondary product__button-add" type="button">ADD - FROM 15$</button>
           </div>
         </div>
       </section>
-      <section class="section section-products">
-        <h2 class="section__title">Beauty products inspired by real skin</h2>
+      <section class="section section-product-info">
+        <h2 class="section__title">SYNERGY IS OUR FRIEND</h2>
         <p class="section__notice">
-          We co-create our products together with our community. We strive to select effective and 100% vegan formulas
-          for each hero product that we launch and we make it bold!
+          there’s no need for lip balm to have more than a handful of ingredients in it. formulated with only the
+          essentials, super salve is super simple and super good for you. nourishing, hydrating, buttery – an everyday
+          balm to rule them all. comes in unusual, not-your-average delicious flavors. fig is a deep moody purple,
+          rhubarb is a bright fire engine red, and sorbet is a sheer wash of soft pink. oh, and there’s also 3 untinted
+          flavors. balm appetite!
         </p>
-        <ul class="product-list">
-          <li class="product-item">
-            <a class="product-item-wrapper" href="/product.html"
-              ><p class="product-item__title">MASCARA</p>
-              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-              <div class="product-item__image-container">
-                <picture
-                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-                /></picture></div
-            ></a>
-          </li>
-          <li class="product-item">
-            <a class="product-item-wrapper" href="/product.html"
-              ><p class="product-item__title">MASCARA</p>
-              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-              <div class="product-item__image-container">
-                <picture
-                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-                /></picture></div
-            ></a>
-          </li>
-          <li class="product-item">
-            <a class="product-item-wrapper" href="/product.html"
-              ><p class="product-item__title">MASCARA</p>
-              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-              <div class="product-item__image-container">
-                <picture
-                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-                /></picture></div
-            ></a>
-          </li>
-          <li class="product-item">
-            <a class="product-item-wrapper" href="/product.html"
-              ><p class="product-item__title">MASCARA</p>
-              <p class="product-item__notice">SYNERGY IS OUR FRIEND</p>
-              <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-              <div class="product-item__image-container">
-                <picture
-                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-                  <img src="images/product-1.png" alt="product-1" class="product-item__image" width="358" height="334"
-                /></picture></div
-            ></a>
-          </li>
-        </ul>
-        <a href="#" class="products__see-more">SEE MORE</a>
       </section>
-      <section class="section section-generator">
-        <p class="section__notice">
-          I'm RAD MEME GENERATOR.<br />I am an artificial intelligence dedicated to&nbsp;generating&nbsp;unlimited
-          amounts of unique inspirational quotes for endless enrichment of pointless human existence.
-        </p>
-        <picture
-          ><source srcset="images/generator@2x.png 2x, images/generator.png" />
-          <img
-            loading="lazy"
-            src="images/generator.png"
-            alt="RAD Worldwide"
-            class="generator__image"
-            width="665"
-            height="460"
-        /></picture>
-        <div class="generator__buttons">
-          <button class="button generator__button" type="button">CREATE</button>
-          <button class="button generator__button" type="button">DOWNLOAD</button>
-        </div>
-      </section>
-      <section class="section section-banners">
-        <div class="banners__col banners-col1">
-          <p class="banners-col1__title">WHAT WE BELIEVE IN RAD</p>
-          <p class="banners-col1__notice">radical lovers of everything about you</p>
-        </div>
-        <div class="banners__col banners-col2">
+      <section class="section section-product-description">
+        <div class="description__col description-col1">
           <picture
-            ><source srcset="images/footer-photo@2x.png 2x, images/footer-photo.png" />
+            ><source srcset="images/video@2x.png 2x, images/video.png" />
             <img
               loading="lazy"
-              src="images/footer-photo.png"
-              alt=""
-              class="banners-col2__image"
-              width="720"
-              height="552"
+              src="images/video.png"
+              alt="Video"
+              class="description-col1__image"
+              width="719"
+              height="600"
           /></picture>
+        </div>
+        <div class="description__col description-col2">
+          <p class="description-col2__content">
+            <span class="description-col2__content-title">THE BEST BITS – BROKEN DOWN:</span>
+            <span class="description-col2__content-title">ONE HIT FOR HIGH VOLUME. HIGH VOLUME</span> Unique
+            heart-shaped fibers lock onto lashes for long-lasting volume. Unlike cylindrical fibers which can appear
+            spidery, the hollow heart-shaped fibers lay in each direction and fill with formula for maximum volume. The
+            result? Fluffy, full, voluminous lashes.
+            <span class="description-col2__content-title">PUFF PUFF BRUSH</span> The tapered tree-shaped Puff Puff Brush
+            with criss-cross, medium-firm bristles catches and coats every single lash in intense black mineral pigment
+            for a defined, clump-free effect. Layer for added volume. Component is carved out of a solid block of
+            aluminum for an unmatched luxe feel. <span class="description-col2__content-title">DIRECTIONS</span> Wiggle
+            the Puff Puff Brush from the root of the lashes to the tip, using the brush head to reach and define inner
+            and bottom lashes. Add coats for intense volume that stays clump-free.
+            <span class="description-col2__content-title">INGREDIENTS</span> Methyl Trimethicone, Titanium Dioxide (CI
+            77891), Mica, Polyethylene, Trimethylsiloxysilicate, Octyldodecanol, Ozokerite, Acrylates/Dimethicone
+            Copolymer, Disteardimonium Hectorite, Propylene Carbonate, Synthetic Fluorphlogopite, Pentaerythrityl
+            Tetra-Di-t-Butyl Hydroxyhydrocinnamate, Tin Oxide.
+          </p>
+          <button class="button button--secondary product__button-add" type="button">ADD - FROM 15$</button>
+        </div>
+        <div class="description__col description-col3">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product__image" width="517" height="517"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
+                  <img src="images/product-2.png" alt="product-2" class="product__image" width="517" height="517"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img src="images/product-1.png" alt="product-1" class="product__image" width="517" height="517"
+                /></picture>
+              </div>
+            </div>
+            <div class="swiper-button-prev"><span class="icon icon-arrow-left"></span></div>
+            <div class="swiper-button-next"><span class="icon icon-arrow-right"></span></div>
+          </div>
         </div>
       </section>
     </main>
