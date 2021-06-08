@@ -52,8 +52,7 @@
 
 .product__content {
   flex-shrink: 0;
-  width: 44%;
-  max-width: 485px;
+  width: 485px;
   text-align: center;
 
   @media (max-width: $screen-md) {
@@ -135,24 +134,35 @@
     height: 26px;
   }
 
+  .colors-list-wrapper {
+    width: calc((56px * 4) + (17px * 8));
+  }
+
   & .colors-list__item,
   & .colors-list__color {
     width: 56px;
     height: 56px;
   }
 
-  & .colors-list {
-    padding-left: 14px;
-    padding-right: 14px;
+  & .colors-button--left {
+    padding: 10px 14px 10px 0;
+  }
+
+  & .colors-button--right {
+    padding: 10px 0 10px 14px;
   }
 
   & .colors-list__item {
-    margin-left: calc(34px / 2);
-    margin-right: calc(34px / 2);
+    margin-left: 17px;
+    margin-right: 17px;
   }
 
   @media (max-width: $screen-md) {
     margin-bottom: 26px;
+
+    .colors-list-wrapper {
+      width: calc((30px * 4) + (10px * 8));
+    }
 
     .colors-button .icon {
       width: 36px;
@@ -165,11 +175,6 @@
       height: 30px;
     }
 
-    & .colors-list {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
     & .colors-list__item {
       margin-left: 10px;
       margin-right: 10px;
@@ -178,6 +183,10 @@
 
   @media (max-width: $screen-sm) {
     margin-bottom: 16px;
+
+    .colors-list-wrapper {
+      width: calc((26px * 4) + (10px * 8));
+    }
 
     .colors-button .icon {
       width: 28px;
@@ -188,11 +197,6 @@
     & .colors-list__color {
       width: 26px;
       height: 26px;
-    }
-
-    & .colors-list {
-      padding-left: 7px;
-      padding-right: 7px;
     }
 
     & .colors-list__item {

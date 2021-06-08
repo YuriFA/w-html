@@ -33,7 +33,9 @@ const initSidebar = () => {
 
   const SIDEBAR_ID = 'sidenav';
 
-  document.getElementById(SIDEBAR_ID).style.transition = `all 0.3s cubic-bezier(0, 0, 0.2, 1)`;
+  document.getElementById(
+    SIDEBAR_ID,
+  ).style.transition = `all 0.3s cubic-bezier(0, 0, 0.2, 1)`;
 
   const sidebarTrigger = Array.from(
     document.querySelectorAll(`.${CLASSES.TRIGGER}`),
@@ -104,6 +106,46 @@ const initColorPicker = () => {
   }
 };
 
+const initProductColorPicker = () => {
+  const colorsLists = Array.from(
+    document.querySelectorAll('.colors-list-wrapper'),
+  );
+
+  if (colorsLists.length > 0) {
+    colorsLists.forEach((colorsListElement) => {
+      const parentElement = colorsListElement.parentElement;
+
+      const nextEl = parentElement.querySelector(
+        '.colors-button.colors-button--right',
+      );
+      const prevEl = parentElement.querySelector(
+        '.colors-button.colors-button--left',
+      );
+      console.log({ nextEl, prevEl });
+
+      new Swiper(colorsListElement, {
+        wrapperClass: 'colors-list',
+        slideClass: 'colors-list__item',
+        slidesPerView: 4,
+        // spaceBetween: 5,
+        allowTouchMove: false,
+
+        breakpoints: {
+          // when window width is >= 320px
+          769: {
+            slidesPerView: 4,
+          },
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: nextEl,
+          prevEl: prevEl,
+        },
+      });
+    });
+  }
+};
+
 const initReadMore = () => {
   const privacyMoreButton = document.querySelector('.privacy-read-more');
   const privacyMoreContent = document.querySelector('.privacy-notice__more');
@@ -117,7 +159,7 @@ const initReadMore = () => {
 };
 
 const initProductSlider = () => {
-  const swiper = new Swiper('.swiper-container', {
+  new Swiper('.swiper-container', {
     loop: true,
 
     // Navigation arrows
@@ -143,4 +185,6 @@ DOMReady(() => {
   initReadMore();
 
   initProductSlider();
+
+  initProductColorPicker();
 });

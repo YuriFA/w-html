@@ -16,8 +16,8 @@ export class ColorPicker {
   init = () => {
     this.activeColor = undefined;
 
-    this.buttonPrev = this.container.querySelector(`[${ATTRS.PREV_BUTTON}]`);
-    this.buttonNext = this.container.querySelector(`[${ATTRS.NEXT_BUTTON}]`);
+    // this.buttonPrev = this.container.querySelector(`[${ATTRS.PREV_BUTTON}]`);
+    // this.buttonNext = this.container.querySelector(`[${ATTRS.NEXT_BUTTON}]`);
     this.colorList = this.container.querySelector(`[${ATTRS.LIST}]`);
 
     if (this.colorList) {
@@ -33,25 +33,25 @@ export class ColorPicker {
       });
     }
 
-    this.buttonNext.addEventListener('click', () => {
-      let nextColor = this.activeColor.nextElementSibling;
+    // this.buttonNext.addEventListener('click', () => {
+    //   let nextColor = this.activeColor.nextElementSibling;
 
-      if (!nextColor) {
-        nextColor = this.colorList.children[0];
-      }
+    //   if (!nextColor) {
+    //     nextColor = this.colorList.children[0];
+    //   }
 
-      this.toggleActive(nextColor);
-    });
+    //   this.toggleActive(nextColor);
+    // });
 
-    this.buttonPrev.addEventListener('click', () => {
-      let nextColor = this.activeColor.previousElementSibling;
+    // this.buttonPrev.addEventListener('click', () => {
+    //   let nextColor = this.activeColor.previousElementSibling;
 
-      if (!nextColor) {
-        nextColor = this.colorList.children[this.colorList.children.length - 1];
-      }
+    //   if (!nextColor) {
+    //     nextColor = this.colorList.children[this.colorList.children.length - 1];
+    //   }
 
-      this.toggleActive(nextColor);
-    });
+    //   this.toggleActive(nextColor);
+    // });
   };
 
   toggleActive = (nextColor) => {

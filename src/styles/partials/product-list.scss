@@ -90,7 +90,6 @@
       }
     }
 
-
     &:nth-child(2n + 1) {
       &::after {
         width: calc(100% - 50px);
@@ -128,14 +127,18 @@
   flex-shrink: 0;
   max-height: 500px;
   overflow: hidden;
-  text-decoration: none;
-  color: $color-main;
 
   @media (max-width: $screen-md) {
     padding-top: 36px;
     padding-left: 3px;
     padding-right: 3px;
   }
+}
+
+.product-item__link {
+  text-align: center;
+  text-decoration: none;
+  color: $color-main;
 }
 
 .product-item__title {
@@ -181,21 +184,70 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
+
+  @media (max-width: $screen-sm) {
+    .colors-button {
+      .icon-arrow-left {
+        width: 8px;
+        height: 12px;
+        background-image: svg-load("../icons/arrow-left-mobile.svg");
+      }
+
+      .icon-arrow-right {
+        width: 8px;
+        height: 12px;
+        background-image: svg-load("../icons/arrow-right-mobile.svg");
+      }
+
+      &:hover {
+        .icon-arrow-left {
+          background-image: svg-load("../icons/arrow-left-mobile.svg", stroke = $color-purple-light);
+        }
+
+        .icon-arrow-right {
+          background-image: svg-load("../icons/arrow-right-mobile.svg", stroke = $color-purple-light);
+        }
+      }
+    }
+  }
 }
 
 .colors-button {
   @include button-reset;
+
+  position: relative;
+  padding: 10px;
+  z-index: 100;
+  cursor: pointer;
+
+  &:hover {
+    .icon-arrow-left {
+      background-image: svg-load("../icons/arrow-left.svg", stroke = $color-purple-light);
+    }
+
+    .icon-arrow-right {
+      background-image: svg-load("../icons/arrow-right.svg", stroke = $color-purple-light);
+    }
+  }
+}
+
+.colors-list-wrapper {
+  width: calc((30px * 4) + (5px * 8));
+  overflow: hidden;
+
+  @media (max-width: $screen-sm) {
+    width: calc((26px * 4) + (2.5px * 8));
+  }
 }
 
 .colors-list {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .colors-list__item {
+  display: flex;
+  align-items: center;
   width: 30px;
   height: 30px;
   margin-left: 5px;
@@ -229,10 +281,10 @@
   }
 
   @media (max-width: $screen-sm) {
-    width: 25px;
-    height: 25px;
-    margin-left: 7.5px;
-    margin-right: 7.5px;
+    width: 26px;
+    height: 26px;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
   }
 }
 
@@ -243,6 +295,11 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+
+  @media (max-width: $screen-sm) {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .product-item__image-container {
