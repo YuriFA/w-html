@@ -82,13 +82,12 @@ const initAccordion = (event) => {
   const faqQuestions = Array.from(document.querySelectorAll('.faq-questions'));
 
   if (faqQuestions.length > 0) {
-    faqQuestions.forEach((element, index) => {
+    faqQuestions.forEach((element) => {
       new Accordion(element, {
         duration: 400,
         elementClass: 'faq-questions__item',
         triggerClass: 'faq-questions__title',
         panelClass: 'faq-questions__panel',
-        openOnInit: index === 0 ? [0] : [],
         showMultiple: true,
       });
     });
@@ -121,7 +120,6 @@ const initProductColorPicker = () => {
       const prevEl = parentElement.querySelector(
         '.colors-button.colors-button--left',
       );
-      console.log({ nextEl, prevEl });
 
       new Swiper(colorsListElement, {
         wrapperClass: 'colors-list',
@@ -170,6 +168,19 @@ const initProductSlider = () => {
   });
 };
 
+const initVideo = () => {
+  const iframeVideo = document.querySelector('iframe.video');
+  const iframeVideoButtonPlay = document.querySelector('.video-play-button');
+
+  if (iframeVideo && iframeVideoButtonPlay) {
+    iframeVideoButtonPlay.addEventListener('click', () => {
+      iframeVideoButtonPlay.style.display = 'none';
+      // mute=1&amp;
+      iframeVideo.src += '&amp;autoplay=1&amp;enablejsapi=1';
+    });
+  }
+};
+
 DOMReady(() => {
   initStickyHeader();
   initSidebar();
@@ -187,4 +198,6 @@ DOMReady(() => {
   initProductSlider();
 
   initProductColorPicker();
+
+  initVideo();
 });

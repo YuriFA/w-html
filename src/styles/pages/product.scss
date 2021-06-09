@@ -129,9 +129,23 @@
   justify-content: center;
   margin-bottom: 38px;
 
-  .colors-button .icon {
-    width: 48px;
-    height: 26px;
+  .colors-button {
+    .icon {
+      width: 48px;
+      height: 26px;
+    }
+
+    &:hover {
+      .icon-arrow-right {
+        background-image: svg-load("../icons/arrow-right.svg");
+        opacity: 0.7;
+      }
+
+      .icon-arrow-left {
+        background-image: svg-load("../icons/arrow-left.svg");
+        opacity: 0.7;
+      }
+    }
   }
 
   .colors-list-wrapper {
@@ -222,7 +236,17 @@
   padding: 100px 0;
 
   @media (max-width: $screen-sm) {
-    padding: 40px 0;
+    padding: 40px 0 43px;
+
+    .section__title {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    .section__notice {
+      font-size: 14px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -239,28 +263,42 @@
 }
 
 .description-col1 {
+  // position: relative;
+  // max-height: 600px;
   position: relative;
-  max-height: 600px;
+  padding-bottom: 75%;
+  height: 0;
   overflow: hidden;
 
-  &:hover {
-    .description-col1__notice {
-      pointer-events: none;
-      opacity: 0;
-    }
+  & > .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   @media (max-width: $screen-sm) {
-    height: 260px;
+    // height: 260px;
   }
 }
 
+.video-play-button {
+  @include button-reset;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .description-col1__image {
+  position: absolute;
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
+  z-index: 1;
 }
 
 .description-col1__notice {
@@ -295,7 +333,23 @@
   margin-bottom: 100px;
   font-size: 24px;
   line-height: 32px;
-  white-space: pre-line;
+
+  & p {
+    margin-bottom: 39px;
+  }
+
+  & strong {
+    margin-bottom: 1px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    text-indent: 1px;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 
   @media (max-width: $screen-lg) {
     margin-bottom: 50px;
@@ -304,19 +358,21 @@
   @media (max-width: $screen-sm) {
     margin-bottom: 39px;
     font-size: 14px;
-    line-height: 17px;
-  }
-}
-
-.description-col2__content-title {
-  font-size: 36px;
-  line-height: 42px;
-  text-indent: 1px;
-  text-transform: uppercase;
-
-  @media (max-width: $screen-sm) {
-    font-size: 20px;
     line-height: 22px;
+
+    & p {
+      margin-bottom: 28px;
+    }
+
+    & strong {
+      margin-bottom: 3px;
+      font-size: 20px;
+      line-height: 22px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -328,6 +384,7 @@
 .description-col3 {
   position: relative;
   height: 750px;
+  margin-top: auto;
   padding: 50px 0;
   background-color: $color-gray;
 
@@ -426,4 +483,3 @@
     font-size: 30px;
   }
 }
-
