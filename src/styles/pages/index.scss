@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 748px;
+  // height: 748px;
   background-image: url("../images/bg-main.png");
   background-size: cover;
   background-position: center;
@@ -11,8 +11,14 @@
   }
 
   @media (max-width: $screen-sm) {
-    height: 587px;
+    // height: 587px;
   }
+}
+
+.hero__video {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .hero__buttons {
@@ -29,12 +35,26 @@
   padding-right: 40px;
 
   @media (max-width: $screen-sm) {
-    display: none;
+    bottom: 40px;
+    justify-content: center;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .hero__button {
   flex-shrink: 0;
+
+  @media (max-width: $screen-sm) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media (max-width: $screen-xxs) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .section-products {

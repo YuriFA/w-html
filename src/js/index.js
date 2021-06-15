@@ -25,6 +25,22 @@ const initStickyHeader = () => {
   handleScroll();
 };
 
+const initStickyCategories = () => {
+  const categories = document.querySelector('.product-categories-wrapper');
+  if (!categories) {
+    return;
+  }
+
+  const sticky = categories.offsetTop - categories.offsetHeight;
+  function handleScroll() {
+    categories.classList.toggle('sticky', window.pageYOffset > sticky);
+  }
+
+  // When the user scrolls the page, execute myFunction
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+};
+
 const initSidebar = () => {
   const CLASSES = {
     TRIGGER: 'sidenav-trigger',
@@ -96,8 +112,9 @@ const initAccordion = (event) => {
 
 const initColorPicker = () => {
   const colorPickers = Array.from(
-    document.querySelectorAll(`[${COLOR_PICKER_ATTRS.CONTINER}]`),
+    document.querySelectorAll(`[${COLOR_PICKER_ATTRS.WRAPPER}]`),
   );
+
   if (colorPickers) {
     colorPickers.forEach((element) => {
       new ColorPicker(element);
@@ -120,6 +137,13 @@ const initProductColorPicker = () => {
       const prevEl = parentElement.querySelector(
         '.colors-button.colors-button--left',
       );
+      const list = colorsListElement.children[0];
+
+      if (list.children.length < 4) {
+        nextEl.style.display = 'none';
+        prevEl.style.display = 'none';
+        return;
+      }
 
       new Swiper(colorsListElement, {
         wrapperClass: 'colors-list',
@@ -183,6 +207,7 @@ const initVideo = () => {
 
 DOMReady(() => {
   initStickyHeader();
+  initStickyCategories();
   initSidebar();
 
   const mobileMatchMedia = window.matchMedia('(max-width: 768px)');

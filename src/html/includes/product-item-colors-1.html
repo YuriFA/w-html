@@ -1,0 +1,29 @@
+<div class="product-item-wrapper" data-color-picker-wrapper="">
+  <a class="product-item__link" href="product2.html">
+    <p class="product-item__title">LIPSTICK</p>
+    <p class="product-item__notice">What’s your flavour?</p>
+  </a>
+
+  <div class="product-item__colors" data-color-picker="">
+    <button type="button" class="colors-button colors-button--left" data-color-picker-prev=""><span class="icon icon-arrow-left"></button>
+
+    <div class="colors-list-wrapper">
+      <ul class="colors-list" data-color-picker-list="">
+        <li class="colors-list__item" data-color-picker-active="">
+          <button class="colors-list__color" type="button" style="background-color: #F2AEBC;"></button>
+        </li>
+      </ul>
+    </div>
+
+    <button type="button" class="colors-button colors-button--right" data-color-picker-next=""><span class="icon icon-arrow-right"></button>
+  </div>
+
+  <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+
+  <a class="product-item__link product-item__image-container" href="product2.html" data-color-picker-images="">
+    <picture>
+      <source srcset="images/product-2@2x.png 2x, images/product-2.png 1x" />
+      <img src="images/product-2.png" alt="product-1" class="product-item__image"/>
+    </picture>
+  </a>
+</div>

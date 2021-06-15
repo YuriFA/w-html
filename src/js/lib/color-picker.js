@@ -1,14 +1,18 @@
 export const ATTRS = {
+  WRAPPER: 'data-color-picker-wrapper',
   CONTINER: 'data-color-picker',
+  IMAGE_CONTINER: 'data-color-picker-images',
   ACTIVE: 'data-color-picker-active',
+  IMAGE_ACTIVE: 'data-color-picker-image-active',
+  IMAGE_HIDDEN: 'data-color-picker-image-hidden',
   PREV_BUTTON: 'data-color-picker-prev',
   NEXT_BUTTON: 'data-color-picker-next',
   LIST: 'data-color-picker-list',
 };
 
 export class ColorPicker {
-  constructor(container) {
-    this.container = container;
+  constructor(wrapper) {
+    this.wrapper = wrapper;
 
     this.init();
   }
@@ -16,14 +20,20 @@ export class ColorPicker {
   init = () => {
     this.activeColor = undefined;
 
-    // this.buttonPrev = this.container.querySelector(`[${ATTRS.PREV_BUTTON}]`);
-    // this.buttonNext = this.container.querySelector(`[${ATTRS.NEXT_BUTTON}]`);
-    this.colorList = this.container.querySelector(`[${ATTRS.LIST}]`);
+    this.container = this.wrapper.querySelector(`[${ATTRS.CONTINER}]`);
+    this.colorListWrapper = this.container.querySelector(`[${ATTRS.LIST}]`);
+    this.imageListWrapper = this.wrapper.querySelector(
+      `[${ATTRS.IMAGE_CONTINER}]`,
+    );
+    this.imageList = Array.from(this.imageListWrapper.querySelectorAll('img'));
+    this.colorList = Array.from(this.colorListWrapper.children);
 
-    if (this.colorList) {
-      this.activeColor = this.colorList.querySelector(`[${ATTRS.ACTIVE}]`);
+    if (this.colorListWrapper) {
+      this.toggleActive(
+        this.colorListWrapper.querySelector(`[${ATTRS.ACTIVE}]`),
+      );
 
-      Array.from(this.colorList.children).forEach((child) => {
+      this.colorList.forEach((child) => {
         const colorButton = child.querySelector('button');
 
         colorButton.addEventListener('click', (event) => {
@@ -32,32 +42,27 @@ export class ColorPicker {
         });
       });
     }
-
-    // this.buttonNext.addEventListener('click', () => {
-    //   let nextColor = this.activeColor.nextElementSibling;
-
-    //   if (!nextColor) {
-    //     nextColor = this.colorList.children[0];
-    //   }
-
-    //   this.toggleActive(nextColor);
-    // });
-
-    // this.buttonPrev.addEventListener('click', () => {
-    //   let nextColor = this.activeColor.previousElementSibling;
-
-    //   if (!nextColor) {
-    //     nextColor = this.colorList.children[this.colorList.children.length - 1];
-    //   }
-
-    //   this.toggleActive(nextColor);
-    // });
   };
 
   toggleActive = (nextColor) => {
-    this.activeColor.removeAttribute(ATTRS.ACTIVE);
+    if (this.activeColor) {
+      this.activeColor.removeAttribute(ATTRS.ACTIVE);
+    }
     nextColor.setAttribute(ATTRS.ACTIVE, '');
 
     this.activeColor = nextColor;
+
+    this.activeIndex = this.colorList.findIndex(
+      (el) => el === this.activeColor,
+    );
+
+    this.imageList.map((image, index) => {
+      if (index === this.activeIndex) {
+        image.removeAttribute(ATTRS.IMAGE_HIDDEN);
+        image.setAttribute(ATTRS.IMAGE_ACTIVE, '');
+      } else {
+        image.setAttribute(ATTRS.IMAGE_HIDDEN, '');
+      }
+    });
   };
 }

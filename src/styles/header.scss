@@ -166,11 +166,19 @@ $header-height: 102px;
   @media (max-width: $screen-sm) {
     height: 60px;
     padding: 0 17px 0 20px;
+
+    &.sticky  {
+      height: 60px;
+    }
   }
 }
 
 .sticky + .main {
   padding-top: $header-height;
+
+  @media (max-width: $screen-sm) {
+    padding-top: 60px;
+  }
 }
 
 .header__logo-image {
