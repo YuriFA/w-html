@@ -103,37 +103,20 @@
           We co-create our products together with our community. We strive to select effective&nbsp;and 100% vegan
           formulas for&nbsp;each&nbsp;hero product that we launch and&nbsp;we make it bold!
         </p>
-        <div class="product-categories product-categories--mobile">
-          <p class="product-categories__title">APPLY ON</p>
-          <ul class="product-categories-list">
-            <li class="product-categories-list__item product-categories-list__item--active">
-              <a class="product-categories-list__link" href="#">ALL</a>
-            </li>
-            <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">FACE</a></li>
-            <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">LIPS</a></li>
-            <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">EYES</a></li>
-          </ul>
+        <div class="product-categories-wrapper">
+          <div class="product-categories">
+            <p class="product-categories__title">APPLY ON</p>
+            <ul class="product-categories-list">
+              <li class="product-categories-list__item product-categories-list__item--active">
+                <a class="product-categories-list__link" href="#">ALL</a>
+              </li>
+              <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">FACE</a></li>
+              <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">LIPS</a></li>
+              <li class="product-categories-list__item"><a class="product-categories-list__link" href="#">EYES</a></li>
+            </ul>
+          </div>
         </div>
         <ul class="product-list">
-          <li class="product-item product-item-categories">
-            <div class="product-categories">
-              <p class="product-categories__title">APPLY ON</p>
-              <ul class="product-categories-list">
-                <li class="product-categories-list__item product-categories-list__item--active">
-                  <a class="product-categories-list__link" href="#">ALL</a>
-                </li>
-                <li class="product-categories-list__item">
-                  <a class="product-categories-list__link" href="#">FACE</a>
-                </li>
-                <li class="product-categories-list__item">
-                  <a class="product-categories-list__link" href="#">LIPS</a>
-                </li>
-                <li class="product-categories-list__item">
-                  <a class="product-categories-list__link" href="#">EYES</a>
-                </li>
-              </ul>
-            </div>
-          </li>
           <li class="product-item">
             <div class="product-item-wrapper">
               <a class="product-item__link" href="product.html"
@@ -153,25 +136,7 @@
             </div>
           </li>
           <li class="product-item">
-            <div class="product-item-wrapper">
-              <a class="product-item__link" href="product.html"
-                ><p class="product-item__title">MASCARA</p>
-                <p class="product-item__notice">SYNERGY IS OUR FRIEND</p></a
-              ><button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-              <a class="product-item__link product-item__image-container" href="product.html"
-                ><picture
-                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
-                  <img
-                    src="images/product-1.png"
-                    alt="product-1"
-                    class="product-item__image"
-                    width="358"
-                    height="334" /></picture
-              ></a>
-            </div>
-          </li>
-          <li class="product-item">
-            <div class="product-item-wrapper" href="product.html">
+            <div class="product-item-wrapper" href="product.html" data-color-picker-wrapper="">
               <a class="product-item__link" href="product.html"
                 ><p class="product-item__title">LIPSTICK</p>
                 <p class="product-item__notice">What’s your flavour?</p></a
@@ -207,16 +172,72 @@
                 </button>
               </div>
               <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-              <a class="product-item__link product-item__image-container" href="product.html"
+              <a
+                class="product-item__link product-item__image-container"
+                href="product.html"
+                data-color-picker-images=""
                 ><picture
                   ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
-                  <img src="images/product-2.png" alt="product-1" class="product-item__image" /></picture
+                  <img src="images/product-2.png" alt="product-2" class="product-item__image" /></picture
+                ><picture
+                  ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
+                  <img
+                    src="images/product-2.png"
+                    alt="product-2"
+                    class="product-item__image"
+                    style="background: #8f3733" /></picture
+                ><picture
+                  ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
+                  <img
+                    src="images/product-2.png"
+                    alt="product-2"
+                    class="product-item__image"
+                    style="background: #e33527" /></picture
+                ><picture
+                  ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
+                  <img
+                    src="images/product-2.png"
+                    alt="product-2"
+                    class="product-item__image"
+                    style="background: #f9e2d6" /></picture
+                ><picture
+                  ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
+                  <img
+                    src="images/product-2.png"
+                    alt="product-2"
+                    class="product-item__image"
+                    style="background: #ff7700" /></picture
+                ><picture
+                  ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
+                  <img
+                    src="images/product-2.png"
+                    alt="product-2"
+                    class="product-item__image"
+                    style="background: #abcdef" /></picture
               ></a>
             </div>
           </li>
           <li class="product-item">
-            <div class="product-item-wrapper" href="product.html">
+            <div class="product-item-wrapper">
               <a class="product-item__link" href="product.html"
+                ><p class="product-item__title">MASCARA</p>
+                <p class="product-item__notice">SYNERGY IS OUR FRIEND</p></a
+              ><button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
+              <a class="product-item__link product-item__image-container" href="product.html"
+                ><picture
+                  ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
+                  <img
+                    src="images/product-1.png"
+                    alt="product-1"
+                    class="product-item__image"
+                    width="358"
+                    height="334" /></picture
+              ></a>
+            </div>
+          </li>
+          <li class="product-item">
+            <div class="product-item-wrapper" data-color-picker-wrapper="">
+              <a class="product-item__link" href="product2.html"
                 ><p class="product-item__title">LIPSTICK</p>
                 <p class="product-item__notice">What’s your flavour?</p></a
               >
@@ -226,23 +247,8 @@
                 </button>
                 <div class="colors-list-wrapper">
                   <ul class="colors-list" data-color-picker-list="">
-                    <li class="colors-list__item">
-                      <button class="colors-list__color" type="button" style="background-color: #f2aebc"></button>
-                    </li>
                     <li class="colors-list__item" data-color-picker-active="">
-                      <button class="colors-list__color" type="button" style="background-color: #8f3733"></button>
-                    </li>
-                    <li class="colors-list__item">
-                      <button class="colors-list__color" type="button" style="background-color: #e33527"></button>
-                    </li>
-                    <li class="colors-list__item">
-                      <button class="colors-list__color" type="button" style="background-color: #f9e2d6"></button>
-                    </li>
-                    <li class="colors-list__item">
-                      <button class="colors-list__color" type="button" style="background-color: #ff7700"></button>
-                    </li>
-                    <li class="colors-list__item">
-                      <button class="colors-list__color" type="button" style="background-color: #abcdef"></button>
+                      <button class="colors-list__color" type="button" style="background-color: #f2aebc"></button>
                     </li>
                   </ul>
                 </div>
@@ -251,7 +257,10 @@
                 </button>
               </div>
               <button class="button button--secondary product-item__button-add" type="button">ADD - FROM 15$</button>
-              <a class="product-item__link product-item__image-container" href="product.html"
+              <a
+                class="product-item__link product-item__image-container"
+                href="product2.html"
+                data-color-picker-images=""
                 ><picture
                   ><source srcset="images/product-2@2x.png 2x, images/product-2.png" />
                   <img src="images/product-2.png" alt="product-1" class="product-item__image" /></picture
