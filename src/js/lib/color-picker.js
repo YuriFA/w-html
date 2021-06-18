@@ -25,7 +25,7 @@ export class ColorPicker {
     this.imageListWrapper = this.wrapper.querySelector(
       `[${ATTRS.IMAGE_CONTINER}]`,
     );
-    this.imageList = Array.from(this.imageListWrapper.querySelectorAll('img'));
+    this.imageList = Array.from(this.imageListWrapper.querySelectorAll('picture'));
     this.colorList = Array.from(this.colorListWrapper.children);
 
     if (this.colorListWrapper) {

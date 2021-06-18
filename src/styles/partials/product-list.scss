@@ -315,6 +315,10 @@
   margin-top: 33px;
   overflow: hidden;
 
+  & picture[data-color-picker-image-hidden] {
+    display: none;
+  }
+
   @media (max-width: $screen-sm) {
     margin-top: 15px;
     margin-bottom: 8px;
@@ -324,10 +328,6 @@
 .product-item__image {
   height: 100%;
   object-fit: contain;
-
-  &[data-color-picker-image-hidden] {
-    display: none;
-  }
 }
 
 .product-categories-wrapper {
