@@ -78,7 +78,7 @@
   }
 }
 
-.product-item.revealed {
+.product-item.revealed .product-item__image {
   animation-duration: var(--animate-duration);
   animation-iteration-count: var(--animate-repeat);
   animation-delay: var(--animate-delay);
@@ -95,19 +95,19 @@
   }
 }
 
-.product-list.shakeX .product-item.revealed {
+.product-list.shakeX .product-item.revealed .product-item__image {
   @include shakeX;
 }
 
-.product-list.headShake .product-item.revealed {
+.product-list.headShake .product-item.revealed .product-item__image {
   @include headShake;
 }
 
-.product-list.swing .product-item.revealed {
+.product-list.swing .product-item.revealed .product-item__image {
   @include swing;
 }
 
-.product-list.tada .product-item.revealed {
+.product-list.tada .product-item.revealed .product-item__image {
   @include tada;
 }
 
