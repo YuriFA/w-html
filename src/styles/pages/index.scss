@@ -87,6 +87,30 @@
   animation-timing-function: ease-in-out;
 }
 
+.product-list {
+  margin-top: 300px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.product-list.shakeX .product-item.revealed {
+  @include shakeX;
+}
+
+.product-list.headShake .product-item.revealed {
+  @include headShake;
+}
+
+.product-list.swing .product-item.revealed {
+  @include swing;
+}
+
+.product-list.tada .product-item.revealed {
+  @include tada;
+}
+
 .section__title {
   max-width: calc(956px + 15px * 2);
   margin: 0 auto 24px;
