@@ -4,6 +4,7 @@ import Swiper, { Navigation, Pagination } from 'swiper/core';
 
 import { ColorPicker, ATTRS as COLOR_PICKER_ATTRS } from './lib/color-picker';
 import { DOMReady } from './utils/DOMReady';
+import { initAnimateOnView } from './lib/animate-on-view';
 
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
@@ -217,12 +218,9 @@ DOMReady(() => {
   });
 
   initColorPicker();
-
   initReadMore();
-
   initProductSlider();
-
   initProductColorPicker();
-
   initVideo();
+  initAnimateOnView();
 });

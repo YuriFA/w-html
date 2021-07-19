@@ -78,6 +78,15 @@
   }
 }
 
+.product-item.revealed {
+  animation-duration: var(--animate-duration);
+  animation-iteration-count: var(--animate-repeat);
+  animation-delay: var(--animate-delay);
+  animation-fill-mode: both;
+  animation-name: pulse;
+  animation-timing-function: ease-in-out;
+}
+
 .section__title {
   max-width: calc(956px + 15px * 2);
   margin: 0 auto 24px;
