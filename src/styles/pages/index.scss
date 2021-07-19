@@ -78,37 +78,13 @@
   }
 }
 
-.product-item.revealed .product-item__image {
+.product-item.revealed .product-item__image:hover {
   animation-duration: var(--animate-duration);
   animation-iteration-count: var(--animate-repeat);
   animation-delay: var(--animate-delay);
   animation-fill-mode: both;
-  animation-name: pulse;
   animation-timing-function: ease-in-out;
-}
-
-.product-list {
-  margin-top: 300px;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
-}
-
-.product-list.shakeX .product-item.revealed .product-item__image {
-  @include shakeX;
-}
-
-.product-list.headShake .product-item.revealed .product-item__image {
-  @include headShake;
-}
-
-.product-list.swing .product-item.revealed .product-item__image {
   @include swing;
-}
-
-.product-list.tada .product-item.revealed .product-item__image {
-  @include tada;
 }
 
 .section__title {
