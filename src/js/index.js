@@ -138,15 +138,19 @@ const initProductColorPicker = () => {
       const prevEl = parentElement.querySelector(
         '.colors-button.colors-button--left',
       );
-      const list = colorsListElement.children[0];
+      const list = Array.from(colorsListElement.children[0].children);
+      const activeIndex = list.findIndex((element) => {
+        return element.hasAttribute(COLOR_PICKER_ATTRS.ACTIVE);
+      });
 
-      if (list.children.length < 4) {
+      if (list.length < 4) {
         nextEl.style.display = 'none';
         prevEl.style.display = 'none';
         return;
       }
 
       new Swiper(colorsListElement, {
+        initialSlide: activeIndex,
         wrapperClass: 'colors-list',
         slideClass: 'colors-list__item',
         slidesPerView: 4,

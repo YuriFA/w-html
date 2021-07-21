@@ -221,6 +221,11 @@
   z-index: 100;
   cursor: pointer;
 
+  &[disabled] {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   &:hover {
     .icon-arrow-left {
       background-image: svg-load("../icons/arrow-left.svg", stroke = $color-purple-light);
