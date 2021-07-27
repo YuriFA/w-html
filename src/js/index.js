@@ -143,7 +143,7 @@ const initProductColorPicker = () => {
         return element.hasAttribute(COLOR_PICKER_ATTRS.ACTIVE);
       });
 
-      if (list.length < 4) {
+      if (list.length < 5) {
         nextEl.style.display = 'none';
         prevEl.style.display = 'none';
         return;
