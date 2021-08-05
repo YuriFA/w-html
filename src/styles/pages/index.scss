@@ -121,8 +121,8 @@
 .products__see-more {
   display: block;
   margin-top: 44px;
-  font-size: 23px;
-  line-height: 23px;
+  font-size: 20px;
+  line-height: 20px;
   color: $color-main;
   text-align: center;
   text-decoration: none;
@@ -131,8 +131,8 @@
   @media (max-width: $screen-sm) {
     margin-top: 0;
     padding-bottom: 37px;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 16px;
+    line-height: 16px;
     background-color: $color-gray;
     text-decoration: underline;
   }
