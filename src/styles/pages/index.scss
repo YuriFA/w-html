@@ -78,7 +78,7 @@
   }
 }
 
-.product-item.revealed .product-item__image:hover {
+.product-item .product-item__image:hover {
   animation-duration: var(--animate-duration);
   animation-iteration-count: var(--animate-repeat);
   animation-delay: var(--animate-delay);
