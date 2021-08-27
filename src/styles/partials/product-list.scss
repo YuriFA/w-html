@@ -348,15 +348,6 @@
     position: fixed;
     top: 0;
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      border-top: 1px solid rgba($color-main, 0.1);
-    }
-
     .product-categories {
       padding: 21px 40px 14px;
       background: $color-secondary;
@@ -385,6 +376,15 @@
     &.sticky {
       padding-left: 0;
       padding-right: 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-top: 1px solid rgba($color-main, 0.1);
+      }
 
       .product-categories {
         justify-content: space-between;
