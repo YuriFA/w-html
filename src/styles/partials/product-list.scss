@@ -24,6 +24,10 @@
   position: relative;
   padding-bottom: 24px;
 
+  &:hover, &:hover * {
+    cursor: url('../images/rad-cursor-product.png'), auto;	
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -140,6 +144,7 @@
   text-align: center;
   text-decoration: none;
   color: $color-main;
+  cursor: default;
 }
 
 .product-item__title {
@@ -186,6 +191,7 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 30px;
+  height: 30px;
 
   @media (max-width: $screen-sm) {
     .colors-button {
@@ -220,7 +226,7 @@
   position: relative;
   padding: 10px;
   z-index: 100;
-  cursor: pointer;
+  // cursor: pointer;
 
   &[disabled] {
     opacity: 0;
@@ -307,6 +313,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  background-size: contain;
 
   @media (max-width: $screen-sm) {
     width: 26px;
