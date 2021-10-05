@@ -208,16 +208,18 @@
       </section>
       <section class="section section-product-description">
         <div class="description__col description-col1">
-          <iframe
-            class="video"
-            width="1424"
-            height="627"
-            src="https://www.youtube.com/embed/rUdc0sF2-Z8?rel=0&amp;fs=0&amp;controls=0&amp;modestbranding=1&amp;enablejsapi=1"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe
-          ><button type="button" class="video-play-button">
+          <div class="description-col1__video">
+            <iframe
+              class="video"
+              width="1424"
+              height="627"
+              src="https://www.youtube.com/embed/rUdc0sF2-Z8?rel=0&amp;fs=0&amp;controls=0&amp;modestbranding=1&amp;enablejsapi=1"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <button type="button" class="video-play-button">
             <picture
               ><source srcset="images/video@2x.png 2x, images/video.png" />
               <img
@@ -265,6 +267,21 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <picture
+                  ><source
+                    srcset="
+                      http://45.147.176.166/upload/iblock/f5f/wwzx5lantlnk7m4qgm7u78hbj1zwj5z6.jpg     2x,
+                      /upload/resize_cache/iblock/f5f/2207_2758_1/wwzx5lantlnk7m4qgm7u78hbj1zwj5z6.jpg
+                    " />
+                  <img
+                    src="http://45.147.176.166/upload/resize_cache/iblock/f5f/2207_2758_1/wwzx5lantlnk7m4qgm7u78hbj1zwj5z6.jpg"
+                    alt="Глиттер для лица"
+                    class="product__image"
+                    width="517"
+                    height="517"
+                /></picture>
+              </div>
+              <div class="swiper-slide">
+                <picture
                   ><source srcset="images/product-1@2x.png 2x, images/product-1.png" />
                   <img src="images/product-1.png" alt="product-1" class="product__image" width="517" height="517"
                 /></picture>
@@ -302,6 +319,13 @@
         </div>
         <div class="footer__col footer-col2"><a class="footer-col2__link" href="shop.html">SHOP</a></div>
         <div class="footer__col footer-col3"><a class="footer-col3__link" href="about.html">ABOUT</a></div>
+        <form class="footer__col footer-col-form-mobile newsletter-form">
+          <p class="newsletter-form__title">NEWSLETTER</p>
+          <div class="newsletter-form__row">
+            <input class="newsletter-form__input" value="" />
+            <button class="button newsletter-form__submit" type="submit">SIGN UP</button>
+          </div>
+        </form>
         <div class="footer__col footer__col--medium footer-col4">
           <picture
             ><source srcset="images/logo@2x.png 2x, images/logo.png" />
@@ -310,6 +334,13 @@
           <p class="footer-col4__notice">2021 RAD NOT BAD- All Rights Reserved</p>
         </div>
         <div class="footer__col footer__col--medium footer-col5">
+          <form class="newsletter-form">
+            <p class="newsletter-form__title">NEWSLETTER</p>
+            <div class="newsletter-form__row">
+              <input class="newsletter-form__input" value="" />
+              <button class="button newsletter-form__submit" type="submit">SIGN UP</button>
+            </div>
+          </form>
           <nav class="footer-nav">
             <ul class="footer-menu">
               <li class="footer-menu__item footer-menu__category">ПОМОЩЬ</li>
