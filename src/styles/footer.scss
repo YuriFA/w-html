@@ -4,19 +4,24 @@
   grid-gap: 0;
   grid-auto-rows: minmax(226px, auto);
 
-  @media (max-width: $screen-sm) {
-    grid-auto-rows: minmax(82px, auto);
+  @media (max-width: $screen-md-x) {
+    grid-auto-rows: minmax(41px, auto);
   }
 }
 
 .footer__col--2rows {
   grid-row-end: span 2;
+
+  @media (max-width: $screen-md-x) {
+    grid-row-end: span 4;
+  }
 }
 
 .footer__col--medium {
   height: 406px;
 
   @media (max-width: $screen-sm) {
+    grid-row-end: span 4;
     height: 264px;
   }
 }
@@ -106,8 +111,15 @@
 
 .footer-col5 {
   display: flex;
+  flex-direction: column;
   padding-bottom: 40px;
   background-color: $color-green;
+
+  @media (max-width: $screen-md-x) {
+    .newsletter-form {
+      display: none;
+    }
+  }
 
   @media (max-width: $screen-md-x) {
     display: flex;
@@ -229,5 +241,77 @@
   @media (max-width: $screen-sm) {
     font-size: 12px;
     line-height: 16px;
+  }
+}
+
+.footer-col-form-mobile {
+  display: none;
+
+  @media (max-width: $screen-md-x) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-row-end: span 2;
+    height: 100%;
+    background-color: $color-green;
+  }
+}
+
+.newsletter-form {
+  margin-top: auto;
+}
+
+.newsletter-form__title {
+  margin-bottom: 25px;
+  font-size: 50px;
+  line-height: 68px;
+  text-align: center;
+  
+  @media (max-width: $screen-sm) {
+    margin-bottom: 7px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.newsletter-form__row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.newsletter-form__input {
+  flex-grow: 1;
+  height: 42px;
+  padding: 0 10px;
+  font-size: 16px;
+  border: none;
+  background: #fff;
+
+  @media (max-width: $screen-sm) {
+    width: 60%;
+    height: 24px;
+  }
+}
+
+.newsletter-form__submit {
+  max-width: 35%;
+  height: 42px;
+  margin-left: 10px;
+  white-space: nowrap;
+
+  @media (max-width: $screen-sm) {
+    width: 125px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  @media (max-width: $screen-xs) {
+    width: 40%;
+    font-size: 11px;
   }
 }
