@@ -267,6 +267,10 @@
   font-size: 50px;
   line-height: 68px;
   text-align: center;
+
+  @media (max-width: $screen-md) {
+    margin-bottom: 16px;
+  }
   
   @media (max-width: $screen-sm) {
     margin-bottom: 7px;
@@ -278,6 +282,7 @@
 .newsletter-form__row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 90%;
   margin: 0 auto;
@@ -291,27 +296,35 @@
   border: none;
   background: #fff;
 
+  @media (max-width: $screen-md) {
+    width: 100%;
+  }
+
   @media (max-width: $screen-sm) {
-    width: 60%;
     height: 24px;
   }
 }
 
 .newsletter-form__submit {
-  max-width: 35%;
+  max-width: 40%;
   height: 42px;
   margin-left: 10px;
   white-space: nowrap;
 
+  @media (max-width: $screen-md) {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
   @media (max-width: $screen-sm) {
-    width: 125px;
     height: 24px;
     font-size: 14px;
     line-height: 1.2;
   }
 
   @media (max-width: $screen-xs) {
-    width: 40%;
     font-size: 11px;
   }
 }
