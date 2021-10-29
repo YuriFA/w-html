@@ -209,6 +209,28 @@ const initVideo = () => {
   }
 };
 
+const initIngridientsList = () => {
+  const button = document.querySelector('.product-button-full-ingridients');
+  const ingridientListContainer = document.querySelector('.full-ingridients');
+
+  if (!button && !ingridientListContainer) {
+    return;
+  }
+
+  button.addEventListener('click', () => {
+    if (ingridientListContainer.style.maxHeight) {
+      ingridientListContainer.style.maxHeight = null;
+      ingridientListContainer.classList.remove('full-ingridients--show');
+    } else {
+      ingridientListContainer.style.maxHeight =
+        ingridientListContainer.scrollHeight + 'px';
+      ingridientListContainer.classList.add('full-ingridients--show');
+    }
+
+    button.style.opacity = 0;
+  });
+};
+
 DOMReady(() => {
   initStickyHeader();
   initStickyCategories();
@@ -225,4 +247,5 @@ DOMReady(() => {
   initProductSlider();
   initProductColorPicker();
   initVideo();
+  initIngridientsList();
 });
