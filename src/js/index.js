@@ -138,9 +138,9 @@ const initProductColorPicker = () => {
         '.colors-button.colors-button--left',
       );
       const list = Array.from(colorsListElement.children[0].children);
-      const activeIndex = list.findIndex((element) => {
-        return element.hasAttribute(COLOR_PICKER_ATTRS.ACTIVE);
-      });
+      // const activeIndex = list.findIndex((element) => {
+      //   return element.hasAttribute(COLOR_PICKER_ATTRS.ACTIVE);
+      // });
 
       if (list.length < 5) {
         nextEl.style.display = 'none';
@@ -149,7 +149,7 @@ const initProductColorPicker = () => {
       }
 
       new Swiper(colorsListElement, {
-        initialSlide: activeIndex,
+        // initialSlide: activeIndex,
         wrapperClass: 'colors-list',
         slideClass: 'colors-list__item',
         slidesPerView: 4,
@@ -245,7 +245,10 @@ DOMReady(() => {
   initColorPicker();
   initReadMore();
   initProductSlider();
+
   initProductColorPicker();
+  window.initProductColorPicker = initProductColorPicker;
+
   initVideo();
   initIngridientsList();
 });
