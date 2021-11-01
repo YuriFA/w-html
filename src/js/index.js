@@ -148,7 +148,7 @@ const initProductColorPicker = () => {
         return;
       }
 
-      new Swiper(colorsListElement, {
+      window.swiper = new Swiper(colorsListElement, {
         // initialSlide: activeIndex,
         wrapperClass: 'colors-list',
         slideClass: 'colors-list__item',
