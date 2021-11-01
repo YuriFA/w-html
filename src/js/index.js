@@ -122,7 +122,7 @@ const initColorPicker = () => {
   }
 };
 
-const initProductColorPicker = () => {
+const initProductColorPicker = (startIndex = 0) => {
   const colorsLists = Array.from(
     document.querySelectorAll('.colors-list-wrapper'),
   );
@@ -149,7 +149,7 @@ const initProductColorPicker = () => {
       }
 
       window.swiper = new Swiper(colorsListElement, {
-        // initialSlide: activeIndex,
+        initialSlide: startIndex,
         wrapperClass: 'colors-list',
         slideClass: 'colors-list__item',
         slidesPerView: 4,
