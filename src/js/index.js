@@ -231,7 +231,7 @@ const initIngridientsList = () => {
   });
 };
 
-DOMReady(() => {
+const initAll = () => {
   initStickyHeader();
   initStickyCategories();
   initSidebar();
@@ -244,11 +244,18 @@ DOMReady(() => {
 
   initColorPicker();
   initReadMore();
-  window.initProductSlider = initProductSlider;
+  initProductSlider();
 
   initProductColorPicker();
-  window.initProductColorPicker = initProductColorPicker;
 
   initVideo();
   initIngridientsList();
+};
+
+DOMReady(() => {
+  initAll();
+
+  window.initAll = initAll;
+  window.initProductSlider = initProductSlider;
+  window.initProductColorPicker = initProductColorPicker;
 });
