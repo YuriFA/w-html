@@ -244,7 +244,7 @@ DOMReady(() => {
 
   initColorPicker();
   initReadMore();
-  window.initProductSlider = initProductSlider();
+  window.initProductSlider = initProductSlider;
 
   initProductColorPicker();
   window.initProductColorPicker = initProductColorPicker;
