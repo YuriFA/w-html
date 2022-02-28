@@ -6,7 +6,13 @@
   flex-wrap: wrap;
   padding-top: 80px;
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-lg) {
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @media (max-width: $screen-md-xxx) {
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
     padding-left: 15px;
     padding-right: 15px;
@@ -148,8 +154,10 @@
 }
 
 .product-item__title {
-  padding-top: 5px;
   margin-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
   font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
