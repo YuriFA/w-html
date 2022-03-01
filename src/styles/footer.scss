@@ -5,7 +5,15 @@
   grid-auto-rows: minmax(226px, auto);
 
   @media (max-width: $screen-md-x) {
-    grid-auto-rows: minmax(41px, auto);
+    grid-auto-rows: minmax(128px, auto);
+  }
+
+  @media (max-width: $screen-md) {
+    grid-auto-rows: minmax(80px, auto);
+  }
+
+  @media (max-width: $screen-sm) {
+    grid-auto-rows: minmax(70px, auto);
   }
 }
 
@@ -44,6 +52,11 @@
   color: $color-main;
   text-decoration: none;
 
+  @media (max-width: $screen-md-x) {
+    font-size: 36px;
+    line-height: 52px;
+  }
+
   @media (max-width: $screen-sm) {
     font-size: 18px;
     line-height: 40px;
@@ -69,6 +82,11 @@
   line-height: 68px;
   color: $color-main;
   text-decoration: none;
+
+  @media (max-width: $screen-md-x) {
+    font-size: 36px;
+    line-height: 52px;
+  }
 
   @media (max-width: $screen-sm) {
     font-size: 18px;
@@ -155,7 +173,7 @@
 
   @media (max-width: $screen-md-x) {
     max-width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 
     &:last-child {
       margin-bottom: 0;
@@ -238,7 +256,12 @@
   font-size: 18px;
   line-height: 24px;
 
+  @media (max-width: $screen-md-x) {
+    margin-bottom: 5px;
+  }
+
   @media (max-width: $screen-sm) {
+    margin-bottom: 5px;
     font-size: 12px;
     line-height: 16px;
   }
@@ -263,10 +286,16 @@
 }
 
 .newsletter-form__title {
+  padding: 0 10px;
   margin-bottom: 25px;
   font-size: 50px;
   line-height: 68px;
   text-align: center;
+
+  @media (max-width: $screen-md-x) {
+    font-size: 36px;
+    line-height: 52px;
+  }
 
   @media (max-width: $screen-md) {
     margin-bottom: 16px;
