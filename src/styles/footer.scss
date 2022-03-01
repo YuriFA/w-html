@@ -8,10 +8,6 @@
     grid-auto-rows: minmax(128px, auto);
   }
 
-  @media (max-width: $screen-md) {
-    grid-auto-rows: minmax(80px, auto);
-  }
-
   @media (max-width: $screen-sm) {
     grid-auto-rows: minmax(70px, auto);
   }

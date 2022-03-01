@@ -14,14 +14,6 @@ ul {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-
-  @media (max-width: $screen-md-xx) {
-    font-size: 58.5%;
-  }
-
-  @media (max-width: $screen-sm) {
-    font-size: 62.5%;
-  }
 }
 
 body, html {
