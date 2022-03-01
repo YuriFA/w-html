@@ -160,6 +160,13 @@
   height: auto;
   max-height: 460px;
   margin: 34px auto 0;
+
+  @media (max-width: $screen-sm) {
+    width: auto;
+    height: 320px;
+    max-width: 80%;
+    object-fit: contain;
+  }
 }
 
 .generator__buttons {
