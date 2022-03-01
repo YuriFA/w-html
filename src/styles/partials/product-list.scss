@@ -6,6 +6,10 @@
   flex-wrap: wrap;
   padding-top: 80px;
 
+  @media (min-width: $screen-xl-x) {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
+
   @media (max-width: $screen-lg) {
     grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
     padding-left: 15px;
@@ -58,7 +62,7 @@
     }
   }
 
-  @media (max-width: $screen-md-xx) {
+  @media (max-width: $screen-lg) {
     &:nth-child(4n + 1) {
       &::after {
         width: 100%;
@@ -86,7 +90,7 @@
     }
   }
 
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-md-xxx) {
     &:nth-child(3n + 1) {
       &::after {
         width: 100%;
