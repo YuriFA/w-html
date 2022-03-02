@@ -22,7 +22,11 @@
 }
 
 .footer__col--medium {
-  height: 406px;
+  height: 470px;
+
+  @media (max-width: $screen-md) {
+    height: 400px;
+  }
 
   @media (max-width: $screen-sm) {
     grid-row-end: span 4;
@@ -91,35 +95,47 @@
 }
 
 .footer-col4 {
+  display: flex;
+  flex-direction: column;
   padding: 0 50px;
   background-color: $color-purple;
+
+  & > picture {
+    margin-top: auto;
+  }
 
   @media (max-width: $screen-sm) {
     padding: 0 32px;
   }
 }
 
+
 .footer-col4__image {
   display: block;
-  margin: 127px auto 82px;
+  margin: 0 auto;
   width: 90%;
   max-width: 271px;
   height: auto;
 
   @media (max-width: $screen-sm) {
     max-width: 94px;
-    margin-top: 100px;
-    margin-bottom: 56px;
   }
 }
 
 .footer-col4__notice {
+  margin-top: auto;
+  margin-bottom: 50px;
   font-size: 18px;
   line-height: 24px;
 
   @media (max-width: $screen-sm) {
+    max-width: 132px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
     font-size: 12px;
     line-height: 16px;
+    text-align: center;
   }
 }
 
@@ -285,9 +301,9 @@
 
 .newsletter-form__title {
   padding: 0 10px;
-  margin-bottom: 25px;
+  margin-bottom: 16px;
   font-size: 50px;
-  line-height: 68px;
+  line-height: 62px;
   text-align: center;
 
   @media (max-width: $screen-md-x) {
@@ -296,6 +312,8 @@
   }
 
   @media (max-width: $screen-md) {
+    font-size: 32px;
+    line-height: 48px;
     margin-bottom: 16px;
   }
   
@@ -303,6 +321,11 @@
     margin-bottom: 7px;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media (max-width: $screen-xs) {
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
@@ -341,7 +364,7 @@
   @media (max-width: $screen-md) {
     max-width: 100%;
     width: 100%;
-    margin-top: 16px;
+    margin-top: 8px;
     margin-left: 0;
   }
 
