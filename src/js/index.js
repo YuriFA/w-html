@@ -10,13 +10,16 @@ Swiper.use([Navigation, Pagination]);
 
 const initStickyHeader = () => {
   const header = document.querySelector('.header');
+  const sidenav = document.querySelector('.sidenav');
   const sticky = header.offsetTop + 50;
 
   function handleScroll() {
     if (window.pageYOffset > sticky) {
       header.classList.add('sticky');
+      sidenav.classList.add('sticky');
     } else {
       header.classList.remove('sticky');
+      sidenav.classList.remove('sticky');
     }
   }
 

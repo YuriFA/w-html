@@ -18,13 +18,18 @@ $header-height: 102px;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    margin-top: 25px;
     height: 60px;
+    margin-top: 25px;
+  }
+
+  &.sticky &__header {
+    margin-top:0;
   }
 
   .sidenav__logo-image {
     width: 64px;
     height: auto;
+    padding-top: 5px;
   }
 
   &__wrapper {
@@ -86,7 +91,7 @@ $header-height: 102px;
 .sidenav-trigger {
   @include button-reset;
 
-  @media (min-width: $screen-sm + 1) {
+  @media (min-width: $screen-sm) {
     display: none;
   }
 }
@@ -156,11 +161,6 @@ $header-height: 102px;
     height: 56px;
     box-shadow: 0px 4px 4px 1px rgba($color-main, 0.25);
     z-index: $zindex-header;
-
-    .header__logo-image {
-      width: 71px;
-      height: auto;
-    }
   }
 
   @media (max-width: $screen-sm) {
@@ -211,6 +211,7 @@ $header-height: 102px;
   color: $color-main;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .header__right {
