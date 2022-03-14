@@ -339,8 +339,9 @@
   flex: 1 1 auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 33px;
-  overflow: hidden;
+  overflow: visible;
 
   & picture[data-color-picker-image-hidden] {
     display: none;
@@ -354,9 +355,14 @@
 
 .product-item__image {
   width: 100%;
-  max-width: 100%;
+  height: auto;
+  max-width: 298px;
   max-height: 100%;
   object-fit: contain;
+
+  @media (max-width: $screen-md) {
+    max-width: 248px;
+  }
 }
 
 .product-categories-wrapper {
