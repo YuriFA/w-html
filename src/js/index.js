@@ -98,19 +98,34 @@ const initAccordion = (event) => {
     return;
   }
 
+  let accordions = [];
+
   const faqQuestions = Array.from(document.querySelectorAll('.faq-questions'));
 
   if (faqQuestions.length > 0) {
     faqQuestions.forEach((element) => {
-      new Accordion(element, {
+      let accordion = new Accordion(element, {
         duration: 400,
         elementClass: 'faq-questions__item',
         triggerClass: 'faq-questions__title',
         panelClass: 'faq-questions__panel',
         showMultiple: true,
       });
+
+      accordions.push(accordion)
     });
   }
+
+  const desktopMatchMedia = window.matchMedia('(min-width: 1025px)');
+  desktopMatchMedia.addListener((e) => {
+    if (!e.matches) {
+      return;
+    }
+
+    accordions.forEach((accordion) => {
+      accordion.detachEvents();
+    })
+  });
 };
 
 const initColorPicker = () => {

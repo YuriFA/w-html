@@ -83,7 +83,7 @@
 .faq-questions__item {
   margin-top: 35px;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-md) {
     margin-top: 20px;
 
     &.is-active {

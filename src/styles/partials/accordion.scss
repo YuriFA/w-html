@@ -1,4 +1,12 @@
+$screen-md-min: $screen-md + 1;
+
 .faq-questions__item {
+  @media (min-width: $screen-md-min) {
+    .faq-questions__panel {
+      height: auto !important;
+    }
+  }
+
   @media (max-width: $screen-md) {
     // Trigger class
     .faq-questions__title {
