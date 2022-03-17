@@ -1,28 +1,30 @@
 .faq-questions__item {
-  // Trigger class
-  .faq-questions__title {
-    position: relative;
-    display: block;
-  }
-
-  // Panel class
-  .faq-questions__panel {
-    overflow: hidden;
-    transition-property: height, visibility;
-    transition-timing-function: ease;
-  }
-
-  // Hide content when Javascript is enabled
-  &.js-enabled {
-    .faq-questions__panel {
-      visibility: hidden;
+  @media (max-width: $screen-md) {
+    // Trigger class
+    .faq-questions__title {
+      position: relative;
+      display: block;
     }
-  }
 
-  // Active class
-  &.is-active {
+    // Panel class
     .faq-questions__panel {
-      visibility: visible;
+      overflow: hidden;
+      transition-property: height, visibility;
+      transition-timing-function: ease;
+    }
+
+    // Hide content when Javascript is enabled
+    &.js-enabled {
+      .faq-questions__panel {
+        visibility: hidden;
+      }
+    }
+
+    // Active class
+    &.is-active {
+      .faq-questions__panel {
+        visibility: visible;
+      }
     }
   }
 }

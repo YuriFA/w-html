@@ -239,7 +239,7 @@ const initAll = () => {
   initStickyCategories();
   initSidebar();
 
-  const mobileMatchMedia = window.matchMedia('(max-width: 768px)');
+  const mobileMatchMedia = window.matchMedia('(max-width: 1024px)');
   mobileMatchMedia.addListener(initAccordion);
   window.addEventListener('load', function () {
     initAccordion(mobileMatchMedia);
