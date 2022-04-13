@@ -56,13 +56,13 @@ export class ColorPicker {
       (el) => el === this.activeColor,
     );
 
-    this.imageList.map((image, index) => {
-      if (index === this.activeIndex) {
-        image.removeAttribute(ATTRS.IMAGE_HIDDEN);
-        image.setAttribute(ATTRS.IMAGE_ACTIVE, '');
-      } else {
-        image.setAttribute(ATTRS.IMAGE_HIDDEN, '');
-      }
-    });
+    // this.imageList.map((image, index) => {
+    //   if (index === this.activeIndex) {
+    //     image.removeAttribute(ATTRS.IMAGE_HIDDEN);
+    //     image.setAttribute(ATTRS.IMAGE_ACTIVE, '');
+    //   } else {
+    //     image.setAttribute(ATTRS.IMAGE_HIDDEN, '');
+    //   }
+    // });
   };
 }

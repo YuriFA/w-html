@@ -175,7 +175,7 @@ const initProductColorPicker = (startIndex = 0) => {
         allowTouchMove: false,
 
         breakpoints: {
-          // when window width is >= 320px
+          // when window width is >= 769
           769: {
             slidesPerView: 4,
           },
@@ -187,6 +187,34 @@ const initProductColorPicker = (startIndex = 0) => {
         },
       });
     });
+  }
+};
+
+const initProductImageSwiper = (startIndex = 0) => {
+  const productImageContainer = 
+    document.querySelector('.product__image-container')
+
+  if (productImageContainer) {
+    window.productImageSwiper = new Swiper(productImageContainer, {
+      initialSlide: startIndex,
+      wrapperClass: 'product__image-wrapper',
+      slideClass: 'product__image-picture',
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 30,
+      allowTouchMove: true,
+
+      breakpoints: {
+        // when window width is >= 769
+        769: {
+          allowTouchMove: false,
+        },
+      },
+    });
+
+    // window.productImageSwiper.on('slideChange', swiperInstance => {
+    //   console.log({INDEX: swiperInstance.activeIndex});
+    // })
   }
 };
 
@@ -265,6 +293,7 @@ const initAll = () => {
   initProductSlider();
 
   initProductColorPicker();
+  initProductImageSwiper();
 
   initVideo();
   initIngridientsList();
