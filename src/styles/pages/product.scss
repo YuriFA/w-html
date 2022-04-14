@@ -35,9 +35,9 @@
     flex-shrink: 0;
   }
 
-  & picture[data-color-picker-image-hidden] {
-    display: none;
-  }
+  // & picture[data-color-picker-image-hidden] {
+  //   display: none;
+  // }
 
   @media (max-width: $screen-md-xx) {
     max-width: 485px;

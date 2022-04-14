@@ -190,13 +190,18 @@ const initProductColorPicker = (startIndex = 0) => {
   }
 };
 
-const initProductImageSwiper = (startIndex = 0) => {
+const initProductImageSwiper = () => {
   const productImageContainer = 
     document.querySelector('.product__image-container')
 
   if (productImageContainer) {
+    const imageList = productImageContainer.querySelectorAll('.product__image-picture');
+    const activeImage = productImageContainer.querySelector('.product__image-picture-active');
+
+    const activeImageIndex = imageList ? Array.from(imageList).indexOf(activeImage) : 0;
+
     window.productImageSwiper = new Swiper(productImageContainer, {
-      initialSlide: startIndex,
+      initialSlide: activeImageIndex,
       wrapperClass: 'product__image-wrapper',
       slideClass: 'product__image-picture',
       slidesPerView: 1,
